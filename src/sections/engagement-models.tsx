@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { CheckCircle2, MessageSquare } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
@@ -11,7 +11,7 @@ export function EngagementModels() {
   return (
     <Section id="pricing" className="relative overflow-hidden border-b border-white/5">
       {/* Decorative gradient blur */}
-      <div className="absolute top-1/4 left-2/3 -z-10 size-[32rem] rounded-full bg-[#72f0a8]/3 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/4 left-2/3 -z-10 size-[32rem] rounded-full bg-[#10b981]/3 blur-[120px] pointer-events-none" />
 
       <SectionHeading
         eyebrow="Engagement Models"
@@ -27,30 +27,30 @@ export function EngagementModels() {
               <GlassCard
                 className={`flex flex-col justify-between h-full p-6.5 relative overflow-hidden border ${
                   isFeatured
-                    ? "border-[#72f0a8]/30 bg-gradient-to-b from-[#06120d]/50 to-[#030706]/90 shadow-[0_0_50px_rgba(114,240,168,0.1)]"
-                    : "border-white/5 bg-[#030706]/60 hover:border-[#72f0a8]/20"
+                    ? "border-[#10b981]/30 bg-gradient-to-b from-[#06120d]/50 to-[#030706]/90 shadow-[0_0_50px_rgba(114,240,168,0.1)]"
+                    : "border-white/5 bg-[#030706]/60 hover:border-[#10b981]/20"
                 } transition duration-300 group`}
               >
                 {/* Glow overlay for popular tier */}
                 {isFeatured && (
-                  <div className="absolute top-0 right-0 size-24 bg-gradient-to-bl from-[#72f0a8]/10 to-transparent pointer-events-none" />
+                  <div className="absolute top-0 right-0 size-24 bg-gradient-to-bl from-[#10b981]/10 to-transparent pointer-events-none" />
                 )}
 
                 <div>
                   {/* Badge & Price Header */}
                   <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-[#72f0a8]/80 font-mono">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-[#10b981]/80 font-mono">
                       {model.priceRange}
                     </span>
                     {model.badge && (
-                      <span className="rounded-full bg-[#72f0a8]/10 border border-[#72f0a8]/20 px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-[#72f0a8]">
+                      <span className="rounded-full bg-[#10b981]/10 border border-[#10b981]/20 px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-[#10b981]">
                         {model.badge}
                       </span>
                     )}
                   </div>
 
                   {/* Title */}
-                  <h3 className="mt-5 text-lg font-bold tracking-tight text-white group-hover:text-[#72f0a8] transition duration-200">
+                  <h3 className="mt-5 text-lg font-bold tracking-tight text-white group-hover:text-[#10b981] transition duration-200">
                     {model.title}
                   </h3>
 
@@ -63,7 +63,7 @@ export function EngagementModels() {
                   <ul className="mt-6 space-y-2.5 border-t border-white/5 pt-5 text-left">
                     {model.features.map((feat, fIdx) => (
                       <li key={fIdx} className="flex items-start gap-2.5 text-xs text-white/75 font-medium">
-                        <CheckCircle2 className="size-4 shrink-0 text-[#72f0a8] mt-0.5" />
+                        <CheckCircle2 className="size-4 shrink-0 text-[#10b981] mt-0.5" />
                         <span>{feat}</span>
                       </li>
                     ))}
@@ -76,8 +76,8 @@ export function EngagementModels() {
                     href="#contact"
                     className={`inline-flex items-center justify-center gap-1.5 rounded-full w-full py-3.5 text-xs font-bold uppercase tracking-wider transition duration-300 ${
                       isFeatured
-                        ? "bg-[#72f0a8] text-[#030706] hover:bg-[#d9ff73]"
-                        : "bg-white/5 text-white border border-white/10 hover:border-[#72f0a8]/35 hover:bg-white/10"
+                        ? "bg-[#10b981] text-[#030706] hover:bg-[#10b981]"
+                        : "bg-white/5 text-white border border-white/10 hover:border-[#10b981]/35 hover:bg-white/10"
                     }`}
                   >
                     Select Package

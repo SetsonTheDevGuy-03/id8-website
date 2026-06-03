@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { ArrowRight, HelpCircle, Layers3 } from "lucide-react";
@@ -14,7 +14,7 @@ export function Process() {
   return (
     <Section id="process" className="relative overflow-hidden border-b border-white/5">
       {/* Decorative gradient glow */}
-      <div className="absolute top-1/3 left-1/3 -z-10 size-[32rem] rounded-full bg-[#72f0a8]/3 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/3 left-1/3 -z-10 size-[32rem] rounded-full bg-[#10b981]/3 blur-[120px] pointer-events-none" />
 
       <SectionHeading
         eyebrow="Delivery Pipeline"
@@ -24,7 +24,7 @@ export function Process() {
 
       {/* Desktop Horizontal Navigator */}
       <div className="mt-16 hidden lg:flex items-center justify-between border-b border-white/10 pb-6 relative">
-        <div className="absolute bottom-[-1px] left-0 h-[2px] bg-gradient-to-r from-[#72f0a8] to-[#d9ff73] transition-all duration-300" 
+        <div className="absolute bottom-[-1px] left-0 h-[2px] bg-gradient-to-r from-[#10b981] to-[#10b981] transition-all duration-300" 
              style={{ 
                width: "14.28%", 
                transform: `translateX(${(activeStep - 1) * 100}%)` 
@@ -35,7 +35,7 @@ export function Process() {
             key={step.step}
             onClick={() => setActiveStep(step.step)}
             className={`w-full text-center pb-3 text-xs font-bold uppercase tracking-wider transition duration-200 focus:outline-none ${
-              activeStep === step.step ? "text-[#72f0a8]" : "text-white/40 hover:text-white"
+              activeStep === step.step ? "text-[#10b981]" : "text-white/40 hover:text-white"
             }`}
           >
             <span className="font-mono mr-1">0{step.step}.</span>
@@ -50,14 +50,14 @@ export function Process() {
           if (step.step !== activeStep) return null;
           return (
             <Reveal key={step.step} className="animate-fade-in">
-              <GlassCard className="p-8 border-[#72f0a8]/20 bg-[#06120d]/40 flex gap-8 items-start text-left">
-                <div className="size-16 rounded-2xl bg-[#72f0a8]/10 border border-[#72f0a8]/20 flex items-center justify-center text-xl font-bold font-mono text-[#72f0a8] shrink-0">
+              <GlassCard className="p-8 border-[#10b981]/20 bg-[#06120d]/40 flex gap-8 items-start text-left">
+                <div className="size-16 rounded-2xl bg-[#10b981]/10 border border-[#10b981]/20 flex items-center justify-center text-xl font-bold font-mono text-[#10b981] shrink-0">
                   0{step.step}
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold tracking-tight text-white flex items-center gap-2">
                     {step.title}
-                    <span className="text-xs uppercase font-mono tracking-widest text-[#72f0a8]/80 font-bold bg-[#72f0a8]/5 px-2 py-0.5 border border-[#72f0a8]/10 rounded">
+                    <span className="text-xs uppercase font-mono tracking-widest text-[#10b981]/80 font-bold bg-[#10b981]/5 px-2 py-0.5 border border-[#10b981]/10 rounded">
                       Active Stage
                     </span>
                   </h3>
@@ -78,7 +78,7 @@ export function Process() {
             <div className="flex gap-4 items-start">
               {/* Circular Number Column */}
               <div className="flex flex-col items-center">
-                <div className="size-9 rounded-full bg-[#06120d] border border-white/10 flex items-center justify-center text-xs font-bold font-mono text-[#72f0a8] shrink-0">
+                <div className="size-9 rounded-full bg-[#06120d] border border-white/10 flex items-center justify-center text-xs font-bold font-mono text-[#10b981] shrink-0">
                   0{step.step}
                 </div>
                 {step.step < 7 && (

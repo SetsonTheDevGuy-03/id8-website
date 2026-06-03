@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { ArrowUpRight, Github, Linkedin, MessageSquare, Twitter } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { navigation } from "@/data/navigation";
@@ -9,16 +9,16 @@ export function SiteFooter() {
   return (
     <footer className="relative border-t border-white/10 bg-[#06120d]/30 py-16 sm:py-24 overflow-hidden">
       {/* Decorative radial blur in footer background */}
-      <div className="absolute -bottom-24 -left-24 size-96 rounded-full bg-[#72f0a8]/3 blur-[120px] pointer-events-none" />
+      <div className="absolute -bottom-24 -left-24 size-96 rounded-full bg-[#10b981]/3 blur-[120px] pointer-events-none" />
 
       <Container>
         <div className="grid gap-12 lg:grid-cols-4 md:grid-cols-2">
           {/* Logo & Founding Brief */}
           <div className="flex flex-col gap-5">
             <Link href="/" className="text-xl font-bold tracking-[-0.04em] text-white flex items-center gap-2">
-              <span className="size-3.5 rounded-sm bg-gradient-to-tr from-[#72f0a8] to-[#d9ff73]" />
+              <span className="size-3.5 rounded-sm bg-gradient-to-tr from-[#10b981] to-[#10b981]" />
               <span>
-                ID8 <span className="text-[#72f0a8] font-medium">Technologies</span>
+                ID8 <span className="text-[#10b981] font-medium">Technologies</span>
               </span>
             </Link>
             <p className="text-sm leading-6 text-white/55">
@@ -30,7 +30,7 @@ export function SiteFooter() {
                 href="https://linkedin.com/company/id8-technologies"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="size-9 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-[#72f0a8] hover:border-[#72f0a8]/30 bg-white/3 transition duration-200"
+                className="size-9 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-[#10b981] hover:border-[#10b981]/30 bg-white/3 transition duration-200"
                 aria-label="LinkedIn Profile"
               >
                 <Linkedin className="size-4" />
@@ -39,7 +39,7 @@ export function SiteFooter() {
                 href="https://github.com/id8-technologies"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="size-9 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-[#72f0a8] hover:border-[#72f0a8]/30 bg-white/3 transition duration-200"
+                className="size-9 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-[#10b981] hover:border-[#10b981]/30 bg-white/3 transition duration-200"
                 aria-label="GitHub Account"
               >
                 <Github className="size-4" />
@@ -48,7 +48,7 @@ export function SiteFooter() {
                 href="https://twitter.com/id8_tech"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="size-9 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-[#72f0a8] hover:border-[#72f0a8]/30 bg-white/3 transition duration-200"
+                className="size-9 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-[#10b981] hover:border-[#10b981]/30 bg-white/3 transition duration-200"
                 aria-label="Twitter Account"
               >
                 <Twitter className="size-4" />
@@ -57,7 +57,7 @@ export function SiteFooter() {
                 href="https://wa.me/264812345678"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="size-9 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-[#72f0a8] hover:border-[#72f0a8]/30 bg-white/3 transition duration-200"
+                className="size-9 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-[#10b981] hover:border-[#10b981]/30 bg-white/3 transition duration-200"
                 aria-label="WhatsApp Contact"
               >
                 <MessageSquare className="size-4" />
@@ -73,14 +73,14 @@ export function SiteFooter() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-sm text-white/60 hover:text-[#72f0a8] transition duration-150"
+                  className="text-sm text-white/60 hover:text-[#10b981] transition duration-150"
                 >
                   {item.label}
                 </Link>
               ))}
               <Link
                 href="#contact"
-                className="text-sm text-white/60 hover:text-[#72f0a8] transition duration-150 flex items-center gap-1"
+                className="text-sm text-white/60 hover:text-[#10b981] transition duration-150 flex items-center gap-1"
               >
                 Start a Project <ArrowUpRight className="size-3" />
               </Link>
@@ -110,13 +110,13 @@ export function SiteFooter() {
               <div className="flex flex-col gap-1.5 mt-2">
                 <a
                   href="mailto:hello@id8technologies.com"
-                  className="hover:text-[#72f0a8] transition duration-150 font-medium"
+                  className="hover:text-[#10b981] transition duration-150 font-medium"
                 >
                   hello@id8technologies.com
                 </a>
                 <a
                   href="https://wa.me/264812345678"
-                  className="hover:text-[#72f0a8] transition duration-150 font-medium"
+                  className="hover:text-[#10b981] transition duration-150 font-medium"
                 >
                   +264 81 234 5678 (WhatsApp)
                 </a>
@@ -127,7 +127,7 @@ export function SiteFooter() {
 
         {/* Bottom Line */}
         <div className="border-t border-white/10 mt-16 pt-8 flex flex-col gap-4 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {currentYear} ID8 Technologies. All rights reserved.</p>
+          <p>Â© {currentYear} ID8 Technologies. All rights reserved.</p>
           <p>Built in Namibia. Designed for Africa and beyond.</p>
         </div>
       </Container>

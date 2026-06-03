@@ -1,118 +1,197 @@
-import {
-  Bot,
-  BriefcaseBusiness,
-  ChartNoAxesCombined,
-  CodeXml,
-  Megaphone,
-  PanelsTopLeft,
-  Search,
-  Shapes,
-} from "lucide-react";
-import type { Service } from "@/types/content";
+export interface Service {
+  id: string;
+  title: string;
+  category: string;
+  summary: string;
+  bullets: string[];
+  outcomes: string[];
+  subServices: string[];
+}
 
 export const services: Service[] = [
   {
+    id: "digital-presence",
     title: "Websites & Digital Presence",
-    description:
-      "Professional websites, landing pages, and tourism portals that help businesses build credibility and capture inquiries.",
-    bullets: [
-      "Custom landing pages & portfolios",
-      "Tourism & booking-ready sites",
-      "Event & conference platforms",
-      "SEO & domain setup optimization",
+    category: "Presence & Growth",
+    summary: "Professional, SEO-optimized, highly responsive web interfaces that turn attention into qualified business opportunities.",
+    subServices: [
+      "Custom Business & Corporate Portals",
+      "Interactive One-Page Landing Funnels",
+      "Tourism & Hospitality Booking Engines",
+      "NGO & Institutional Information Platforms",
+      "Professional Persona Portfolios"
     ],
-    icon: PanelsTopLeft,
-    accentClass: "shadow-[#72f0a8]/10 hover:border-[#72f0a8]/40 border-white/10 hover:text-[#72f0a8]",
+    bullets: [
+      "Complete client onboarding & inquiry pipelines built internally",
+      "High-speed loading with optimized asset delivery & clean layouts",
+      "Integrated WhatsApp & call-to-action routing widgets",
+      "Semantic SEO configurations for local Namibian and global search space"
+    ],
+    outcomes: [
+      "Generate continuous stream of qualified customer enquiries",
+      "Establish immediate institutional trust with investors & partners",
+      "Differentiate strongly from competitors with custom branding"
+    ]
   },
   {
+    id: "software-systems",
     title: "Software & Business Systems",
-    description:
-      "Custom dashboards, client portals, internal tools, and web applications that improve business operations.",
-    bullets: [
-      "Operational admin dashboards",
-      "Secure client portals",
-      "Custom CRM & booking tools",
-      "API integrations & workflows",
+    category: "Engineering & Logic",
+    summary: "Bespoke internal dashboards, client portals, and administrative tools that consolidate scattered files and automate process tracking.",
+    subServices: [
+      "Administrative Operations Dashboards",
+      "Secured Client Portals & Document Hubs",
+      "Custom CRM-Lite & Lead Routing Pipelines",
+      "Booking Processors & Inventory Trackers",
+      "Automated PDF Invoice & Report Generators"
     ],
-    icon: CodeXml,
-    accentClass: "shadow-[#22d3ee]/10 hover:border-[#22d3ee]/40 border-white/10 hover:text-[#22d3ee]",
+    bullets: [
+      "Automated operations state instead of messy Excel worksheets",
+      "Role-based secure views for staffs, leaders, and client users",
+      "Unified access point for critical project briefs, designs, and metrics"
+    ],
+    outcomes: [
+      "Eliminate manual administrative lookup hours completely",
+      "Centralize workflow visibility for regional coordinate offices",
+      "Scale from casual freelance tasks into serious corporate systems"
+    ]
   },
   {
-    title: "AI Automation",
-    description:
-      "Practical assistants, workflow automations, and AI content systems that reduce manual work and speed up output.",
-    bullets: [
-      "Custom AI assistants & bots",
-      "Workflow & document automation",
-      "AI content generation tools",
-      "Internal knowledge bases",
+    id: "ai-automation",
+    title: "AI Automation & Workflows",
+    category: "Intelligence & Speed",
+    summary: "Integrate LLM processing and workflow logic into your customer routing, PDF analysis, and daily business checklists to eliminate repetitive desk task delays.",
+    subServices: [
+      "Website & WhatsApp Intelligent Assistants",
+      "Automated Tender & Document Summarization Pools",
+      "AI-Assisted Proposal & Report Drafters",
+      "Dynamic Content Calendar Builders",
+      "Support Ticket Routing & Lead Classifier"
     ],
-    icon: Bot,
-    accentClass: "shadow-[#a78bfa]/10 hover:border-[#a78bfa]/40 border-white/10 hover:text-[#a78bfa]",
+    bullets: [
+      "Auto-generate meeting action items & brief summaries cleanly",
+      "Respond instantly to visitor queries via smart knowledge base integrations",
+      "Saves hours of daily manual documentation and sorting"
+    ],
+    outcomes: [
+      "Saves 10-15 operational hours weekly per team member",
+      "Deliver 24/7 client response cycles across key timezones",
+      "Standardize operations with structured AI-powered decision support"
+    ]
   },
   {
+    id: "product-design",
     title: "Product Design & MVPs",
-    description:
-      "Product strategy, interactive prototypes, user flows, and launch-ready MVP development for startups.",
-    bullets: [
-      "Product strategy & scoping",
-      "High-fidelity UI/UX design",
-      "Interactive clickable prototypes",
-      "First-version MVP builds",
+    category: "Strategy & UX",
+    summary: "Translate complex digital concepts into high-fidelity Figma prototypes, scoped product roadmaps, and validation-ready minimum viable products.",
+    subServices: [
+      "Full Product Strategy & Feature Mapping",
+      "High-Fidelity Wireframes & Active Figma Prototypes",
+      "Pitch-Ready Product Screen Mockups",
+      "User Journey Framing & Onboarding Walkthroughs",
+      "Scoping Architecture & Tech Roadmap Specifications"
     ],
-    icon: Shapes,
-    accentClass: "shadow-[#d9ff73]/10 hover:border-[#d9ff73]/40 border-white/10 hover:text-[#d9ff73]",
+    bullets: [
+      "Clarify feature scope before starting high-budget software development",
+      "Stitch-driven fast design concepts with custom brand systems",
+      "Provide investors with highly visual, click-through system demos"
+    ],
+    outcomes: [
+      "Avoid cost overruns by validating feature paths early",
+      "Secure pre-seed capital or strategic feedback with clear proof-of-concept",
+      "Clarify user value propositions with intuitive, sleek visual workflows"
+    ]
   },
   {
-    title: "Brand Identity & Design",
-    description:
-      "Logos, brand books, pitch decks, and digital collateral that make your business look like a leader.",
-    bullets: [
-      "Custom logo & asset packs",
-      "Corporate brand system guidelines",
-      "Pitch decks & profiles",
-      "Social media design kits",
+    id: "branding-design",
+    title: "Brand Identity & Digital Design",
+    category: "Creative & Identity",
+    summary: "Cohesive brand systems, corporate collateral, pitch assets, and marketing materials that command authority and present credibility.",
+    subServices: [
+      "Custom Typography & Dual-Theme Logo Systems",
+      "Complete Brand Visual Guidelines & Style Pools",
+      "Sponsorship & Bid Tender Proposal Design",
+      "Dynamic Social Media Media Kits & Templates",
+      "Corporate Brochure Layouts & Print Collateral"
     ],
-    icon: BriefcaseBusiness,
-    accentClass: "shadow-[#74930d]/10 hover:border-[#74930d]/40 border-white/10 hover:text-[#74930d]",
+    bullets: [
+      "Build visual authority that justifies premium business rates",
+      "Consistent typography, negative space metrics, and high-impact layouts",
+      "Tailored assets explicitly mapped for digital presentation screens"
+    ],
+    outcomes: [
+      "Elevate regional market trust through impeccable visual systems",
+      "Shorten B2B sales cycles with highly professional company decks",
+      "Command top-tier status in premium pitch encounters"
+    ]
   },
   {
-    title: "Digital Marketing & Growth",
-    description:
-      "Marketing campaigns, lead generation funnels, search visibility, and conversion-oriented layouts.",
-    bullets: [
-      "Lead generation funnel maps",
-      "Campaign planning & collateral",
-      "SEO & brand presence growth",
-      "Performance reporting",
-    ],
-    icon: Megaphone,
-    accentClass: "shadow-[#60a5fa]/10 hover:border-[#60a5fa]/40 border-white/10 hover:text-[#60a5fa]",
-  },
-  {
-    title: "Research & Strategy",
-    description:
-      "Market research, competitor audits, and infrastructure analysis that map scattered ideas to a structured plan.",
-    bullets: [
-      "Market & audience research",
-      "Competitor digital audits",
-      "User journey analysis",
-      "Strategic tech system roadmaps",
-    ],
-    icon: Search,
-    accentClass: "shadow-[#fdba74]/10 hover:border-[#fdba74]/40 border-white/10 hover:text-[#fdba74]",
-  },
-  {
+    id: "event-digital",
     title: "Event Digital Partner Services",
-    description:
-      "Event websites, holding screens, sponsor visual systems, and post-event recaps that elevate major events.",
-    bullets: [
-      "Dynamic event website templates",
-      "Sponsor & speaker visual sheets",
-      "Screen displays & presentation slides",
-      "Social media recap content packs",
+    category: "Infrastructure & Media",
+    summary: "End-to-end digital partner service powering summits, expos, and gala sessions with graphics, sponsor loops, holding screens, and post-event recaps.",
+    subServices: [
+      "Summit Landing Pages & Registration Forms",
+      "Sponsor & Exhibitor Visibility Screen Loops",
+      "Panel Moderator & Speaker Board Cards",
+      "Gala & Award Ceremony Motion Graphics",
+      "Comprehensive Post-Event Storyboard Reports"
     ],
-    icon: ChartNoAxesCombined,
-    accentClass: "shadow-white/15 hover:border-white/40 border-white/10 hover:text-white",
+    bullets: [
+      "Flawless stage integration covering main displays & side monitors",
+      "Sponsor visibility assets that satisfy strict marketing commitments",
+      "Live output coordination to push daily recap material to social arrays"
+    ],
+    outcomes: [
+      "Turn local summits into memorable executive experiences",
+      "Provide measurable reach & premium exposure value for major sponsors",
+      "Maintain active delegate engagement after conference wrap-up"
+    ]
   },
+  {
+    id: "digital-marketing",
+    title: "Digital Marketing & Growth",
+    category: "Marketing & Conversion",
+    summary: "Connect campaign strategy to lead funnels so that marketing traffic is converted into trackable email briefs and WhatsApp discussions.",
+    subServices: [
+      "Social Media Campaign Architectures",
+      "Inbound Lead Generation Pipelines",
+      "Optimized Form Captures & Analytics Tracking",
+      "WhatsApp Business Routing Workflows",
+      "Targeted Email Newsletters & Updates"
+    ],
+    bullets: [
+      "Design campaigns mapped directly to measurable customer actions",
+      "Continuous tracking with real business metrics over idle likes/clicks",
+      "Hand-off templates for internal marketing administration"
+    ],
+    outcomes: [
+      "Align media budgets with real customer acquisition pipelines",
+      "Formulate distinct service hooks that prompt high inquiry triggers",
+      "Develop repeatable content systems for local channels"
+    ]
+  },
+  {
+    id: "research-strategy",
+    title: "Research & Market Strategy",
+    category: "Insights & Direction",
+    summary: "Detailed competitor analysis, website usability audits, and market scans providing data evidence to minimize startup launch guesswork.",
+    subServices: [
+      "Local & Regional Digital Market Scans",
+      "Competitor Offering & Positioning Audits",
+      "User Experience & Conversion Leakage Audits",
+      "Technical App Scoping Workshops",
+      "Strategic Digital Target Planning"
+    ],
+    bullets: [
+      "Data evidence to guide high-investment digital expansion",
+      "Detailed checklist logs showing exactly where your current setups lose users",
+      "Clear positioning directives to carve professional niches in saturated spaces"
+    ],
+    outcomes: [
+      "Navigate digital market entry with real competitive insights",
+      "Eliminate guessing in system feature priority choices",
+      "Formulate winning proposals by presenting researched market truths"
+    ]
+  }
 ];

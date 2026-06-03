@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { Reveal } from "@/components/motion/reveal";
 import { GlassCard } from "@/components/ui/glass-card";
@@ -10,7 +10,7 @@ export function Industries() {
   return (
     <Section id="industries" className="relative overflow-hidden border-b border-white/5 bg-[#030706]">
       {/* Decorative radial gradients */}
-      <div className="absolute top-1/2 -left-48 -z-10 size-[30rem] rounded-full bg-[#d9ff73]/3 blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/2 -left-48 -z-10 size-[30rem] rounded-full bg-[#10b981]/3 blur-[100px] pointer-events-none" />
 
       <SectionHeading
         eyebrow="Target Verticals"
@@ -23,8 +23,8 @@ export function Industries() {
           const Icon = ind.icon;
           return (
             <Reveal key={ind.title} delay={index * 0.04} className="h-full">
-              <GlassCard className="h-full p-6 border-white/5 bg-[#06120d]/20 hover:border-[#72f0a8]/25 transition duration-300 flex flex-col justify-start text-left group">
-                <div className="rounded-xl bg-white/[0.03] border border-white/5 p-3 text-[#72f0a8] shrink-0 w-fit group-hover:bg-[#72f0a8] group-hover:text-[#030706] transition duration-300">
+              <GlassCard className="h-full p-6 border-white/5 bg-[#06120d]/20 hover:border-[#10b981]/25 transition duration-300 flex flex-col justify-start text-left group">
+                <div className="rounded-xl bg-white/[0.03] border border-white/5 p-3 text-[#10b981] shrink-0 w-fit group-hover:bg-[#10b981] group-hover:text-[#030706] transition duration-300">
                   <Icon className="size-5" />
                 </div>
                 

@@ -1,4 +1,4 @@
-import type { ComponentPropsWithoutRef } from "react";
+﻿import type { ComponentPropsWithoutRef } from "react";
 import { cn } from "@/lib/utils";
 
 export function Badge({
@@ -8,7 +8,7 @@ export function Badge({
   return (
     <span
       className={cn(
-        "inline-flex rounded-full border border-[#72f0a8]/25 bg-[#72f0a8]/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-[#72f0a8]",
+        "inline-flex rounded-full border border-[#10b981]/25 bg-[#10b981]/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-[#10b981]",
         className,
       )}
       {...props}

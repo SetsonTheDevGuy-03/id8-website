@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { BarChart3, LineChart, ShieldAlert, Sparkles, TrendingUp } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
@@ -155,11 +155,11 @@ export function ResearchMarketing() {
             {/* Interactive growth stats visual */}
             <div className="mt-6 border-t border-white/5 pt-5 grid grid-cols-3 gap-2.5 text-center">
               <div className="rounded-xl bg-white/[0.02] p-3 border border-white/5">
-                <p className="text-sm font-bold text-[#72f0a8]">+$14k</p>
+                <p className="text-sm font-bold text-[#10b981]">+$14k</p>
                 <p className="text-[9px] uppercase tracking-wider text-white/40 mt-1 font-mono">Campaign Spend</p>
               </div>
               <div className="rounded-xl bg-white/[0.02] p-3 border border-white/5">
-                <p className="text-sm font-bold text-[#22d3ee]">4.8%</p>
+                <p className="text-sm font-bold text-[#3b82f6]">4.8%</p>
                 <p className="text-[9px] uppercase tracking-wider text-white/40 mt-1 font-mono">Conversion CTR</p>
               </div>
               <div className="rounded-xl bg-white/[0.02] p-3 border border-white/5">

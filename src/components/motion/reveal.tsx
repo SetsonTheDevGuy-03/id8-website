@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect, type ReactNode } from "react";
 import { motion, useReducedMotion } from "framer-motion";

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { ArrowUpRight, Beaker, Bot, Code2, Compass, Layers3, Terminal } from "lucide-react";
@@ -40,13 +40,13 @@ export function LabsTeaser() {
   return (
     <Section id="labs" className="relative overflow-hidden border-b border-white/5 bg-[#06120d]/10">
       {/* Decorative gradient radial glows */}
-      <div className="absolute top-1/2 left-3/4 -z-10 size-[32rem] rounded-full bg-[#a78bfa]/3 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-3/4 -z-10 size-[32rem] rounded-full bg-[#8b5cf6]/3 blur-[120px] pointer-events-none" />
 
       <div className="grid gap-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20 items-center">
         {/* Left Column: Heading and roadmap */}
         <Reveal>
           <div className="flex flex-col items-start text-left">
-            <span className="flex items-center gap-1.5 px-3 py-1 rounded-xl border border-[#a78bfa]/20 bg-[#a78bfa]/6 text-[10px] font-bold uppercase tracking-wider text-[#a78bfa] mb-6">
+            <span className="flex items-center gap-1.5 px-3 py-1 rounded-xl border border-[#8b5cf6]/20 bg-[#8b5cf6]/6 text-[10px] font-bold uppercase tracking-wider text-[#8b5cf6] mb-6">
               <Beaker className="size-3.5" />
               ID8 Labs / Product Incubation
             </span>
@@ -54,7 +54,7 @@ export function LabsTeaser() {
             <SectionHeading
               eyebrow="R&D Ecosystem"
               title="Client services today. Product innovation tomorrow."
-              description="ID8 does not only build for others. We run an active research and development laboratory — testing, designing, and compiling internal software platforms for tourism, fintech, and automated workflow operations."
+              description="ID8 does not only build for others. We run an active research and development laboratory â€” testing, designing, and compiling internal software platforms for tourism, fintech, and automated workflow operations."
             />
             
             <p className="mt-5 text-sm leading-7 text-white/55">
@@ -64,10 +64,10 @@ export function LabsTeaser() {
             {/* Labs teaser CTA */}
             <a
               href="#contact"
-              className="mt-8 inline-flex items-center gap-2 rounded-full border border-[#a78bfa]/20 bg-[#a78bfa]/10 px-5 py-3 text-xs font-bold uppercase tracking-wider text-white hover:bg-[#a78bfa]/25 hover:border-[#a78bfa]/40 transition duration-300 shadow-[0_0_20px_rgba(167,139,250,0.15)]"
+              className="mt-8 inline-flex items-center gap-2 rounded-full border border-[#8b5cf6]/20 bg-[#8b5cf6]/10 px-5 py-3 text-xs font-bold uppercase tracking-wider text-white hover:bg-[#8b5cf6]/25 hover:border-[#8b5cf6]/40 transition duration-300 shadow-[0_0_20px_rgba(167,139,250,0.15)]"
             >
               Collaborate on R&D
-              <ArrowUpRight className="size-4 text-[#a78bfa]" />
+              <ArrowUpRight className="size-4 text-[#8b5cf6]" />
             </a>
           </div>
         </Reveal>
@@ -80,7 +80,7 @@ export function LabsTeaser() {
             {/* simulated terminal header */}
             <div className="flex items-center justify-between border-b border-white/5 pb-4 mb-6">
               <div className="flex items-center gap-2">
-                <Terminal className="size-4 text-[#a78bfa]" />
+                <Terminal className="size-4 text-[#8b5cf6]" />
                 <span className="text-[10px] font-bold uppercase tracking-widest font-mono text-white/40">
                   labs-pipeline.sh
                 </span>
@@ -101,13 +101,13 @@ export function LabsTeaser() {
                     onMouseLeave={() => setHoveredProduct(null)}
                     className={`rounded-2xl border p-4.5 transition-all duration-300 cursor-default ${
                       isHovered
-                        ? "border-[#a78bfa]/40 bg-[#a78bfa]/5 shadow-lg"
+                        ? "border-[#8b5cf6]/40 bg-[#8b5cf6]/5 shadow-lg"
                         : "border-white/5 bg-white/[0.01]"
                     }`}
                   >
                     <div className="flex items-start gap-4">
                       <div className={`rounded-xl border p-2.5 transition-colors shrink-0 ${
-                        isHovered ? "bg-[#a78bfa] text-[#030706] border-transparent" : "bg-white/2 border-white/5 text-[#a78bfa]"
+                        isHovered ? "bg-[#8b5cf6] text-[#030706] border-transparent" : "bg-white/2 border-white/5 text-[#8b5cf6]"
                       }`}>
                         <Icon className="size-4.5" />
                       </div>

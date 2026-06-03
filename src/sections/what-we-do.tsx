@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { CheckCircle2 } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
@@ -19,7 +19,7 @@ export function WhatWeDo() {
   return (
     <Section id="about-studio" className="relative overflow-hidden border-b border-white/5">
       {/* Decorative radial glows */}
-      <div className="absolute top-1/2 -right-48 -z-10 size-[30rem] rounded-full bg-[#22d3ee]/3 blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/2 -right-48 -z-10 size-[30rem] rounded-full bg-[#3b82f6]/3 blur-[100px] pointer-events-none" />
 
       <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20 items-center">
         {/* Left Column: Heading and values statement */}
@@ -32,16 +32,16 @@ export function WhatWeDo() {
             />
             
             <p className="mt-4 text-sm leading-7 text-white/55">
-              ID8 Technologies acts as your long-term product engineering partner — helping you build exactly what your business needs today, while structuring the codebase and data systems so you can scale tomorrow without costly rebuilds.
+              ID8 Technologies acts as your long-term product engineering partner â€” helping you build exactly what your business needs today, while structuring the codebase and data systems so you can scale tomorrow without costly rebuilds.
             </p>
 
             {/* Micro strategic credentials block */}
             <div className="mt-8 grid grid-cols-2 gap-4 w-full">
-              <GlassCard className="p-4 border-white/5 hover:border-[#72f0a8]/20 bg-white/2">
+              <GlassCard className="p-4 border-white/5 hover:border-[#10b981]/20 bg-white/2">
                 <p className="text-xl font-bold text-white tracking-tight">100%</p>
                 <p className="text-[10px] uppercase tracking-wider text-white/45 mt-1 font-semibold">Custom Codebase</p>
               </GlassCard>
-              <GlassCard className="p-4 border-white/5 hover:border-[#22d3ee]/20 bg-white/2">
+              <GlassCard className="p-4 border-white/5 hover:border-[#3b82f6]/20 bg-white/2">
                 <p className="text-xl font-bold text-white tracking-tight">No-Fake</p>
                 <p className="text-[10px] uppercase tracking-wider text-white/45 mt-1 font-semibold"> Namibian Proof</p>
               </GlassCard>
@@ -54,7 +54,7 @@ export function WhatWeDo() {
           {supportingPoints.map((point, index) => (
             <Reveal key={index} delay={index * 0.05}>
               <div className="flex items-start gap-4 rounded-2xl border border-white/5 bg-white/[0.02] p-4.5 hover:border-white/10 hover:bg-white/[0.04] transition duration-200">
-                <CheckCircle2 className="size-5 shrink-0 text-[#72f0a8] mt-0.5" />
+                <CheckCircle2 className="size-5 shrink-0 text-[#10b981] mt-0.5" />
                 <p className="text-sm leading-6 text-white/75 font-medium">{point}</p>
               </div>
             </Reveal>

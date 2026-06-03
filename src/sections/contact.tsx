@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { ArrowRight, CheckCircle2, MessageSquare, Send, Sparkles } from "lucide-react";
@@ -6,14 +6,19 @@ import { Reveal } from "@/components/motion/reveal";
 import { Section } from "@/components/ui/section";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { GlassCard } from "@/components/ui/glass-card";
+import { services } from "@/data/services";
 
-export function Contact() {
+type ContactProps = {
+  selectedCartServices: string[];
+  onToggleCartService: (serviceTitle: string) => void;
+};
+
+export function Contact({ selectedCartServices, onToggleCartService }: ContactProps) {
   const [formData, setFormData] = useState({
     name: "",
     company: "",
     email: "",
     whatsapp: "",
-    serviceNeeded: "",
     budgetRange: "",
     timeline: "",
     message: "",
@@ -21,6 +26,23 @@ export function Contact() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const budgetOptions = [
+    "Under N$3,500",
+    "N$3,500 â€“ N$7,500",
+    "N$7,500 â€“ N$15,000",
+    "N$15,000 â€“ N$35,000",
+    "N$35,000+",
+    "Not sure yet"
+  ];
+
+  const timelineOptions = [
+    "Urgent (less than 2 weeks)",
+    "2 â€“ 4 weeks",
+    "1 â€“ 2 months",
+    "2+ months / Long-term",
+    "Flexible"
+  ];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,18 +52,18 @@ export function Contact() {
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitStatus("success");
-      // Console log form details as a placeholder until Supabase integration is wired up
-      console.log("Form submission data:", formData);
+      console.log("Form submission data:", { ...formData, services: selectedCartServices });
     }, 1200);
   };
 
   return (
     <Section id="contact" className="relative overflow-hidden pt-20 pb-28">
       {/* Background visual glows */}
-      <div className="absolute top-1/2 left-1/2 -z-10 size-[35rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#72f0a8]/3 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -z-10 size-[35rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500/5 blur-[120px] pointer-events-none animate-pulse" />
+      <div className="absolute bottom-0 right-0 -z-10 size-[25rem] rounded-full bg-emerald-500/5 blur-[120px] pointer-events-none" />
 
       <div className="grid gap-16 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 items-start">
-        {/* Left Column:战略 CTA */}
+        {/* Left Column:æˆ˜ç•¥ CTA */}
         <Reveal>
           <div className="flex flex-col items-start text-left">
             <SectionHeading
@@ -60,9 +82,9 @@ export function Contact() {
                 href="https://wa.me/264812345678"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 rounded-2xl border border-white/5 bg-white/[0.01] p-4.5 hover:border-[#72f0a8]/25 hover:bg-[#72f0a8]/4 transition duration-300"
+                className="flex items-center gap-4 rounded-2xl border border-white/5 bg-white/[0.01] p-4.5 hover:border-emerald-500/25 hover:bg-emerald-500/5 transition duration-300"
               >
-                <div className="rounded-xl bg-[#72f0a8]/10 p-3 text-[#72f0a8]">
+                <div className="rounded-xl bg-emerald-500/10 p-3 text-emerald-400">
                   <MessageSquare className="size-5" />
                 </div>
                 <div>
@@ -73,9 +95,9 @@ export function Contact() {
 
               <a
                 href="mailto:hello@id8technologies.com"
-                className="flex items-center gap-4 rounded-2xl border border-white/5 bg-white/[0.01] p-4.5 hover:border-[#22d3ee]/25 hover:bg-[#22d3ee]/4 transition duration-300"
+                className="flex items-center gap-4 rounded-2xl border border-white/5 bg-white/[0.01] p-4.5 hover:border-blue-500/25 hover:bg-blue-500/5 transition duration-300"
               >
-                <div className="rounded-xl bg-[#22d3ee]/10 p-3 text-[#22d3ee]">
+                <div className="rounded-xl bg-blue-500/10 p-3 text-blue-400">
                   <Send className="size-5" />
                 </div>
                 <div>
@@ -94,12 +116,12 @@ export function Contact() {
 
         {/* Right Column: Dynamic Form Block */}
         <Reveal delay={0.15}>
-          <GlassCard className="p-6 sm:p-8 border-white/10 bg-[#06120d]/40 shadow-2xl relative text-left">
+          <GlassCard className="p-6 sm:p-8 border-white/10 bg-[#020204]/40 shadow-2xl relative text-left">
             <div className="absolute inset-1 rounded-[1.85rem] bg-gradient-to-br from-white/[0.02] to-transparent pointer-events-none" />
 
             {submitStatus === "success" ? (
-              <div className="py-12 px-4 text-center animate-fade-in">
-                <div className="mx-auto size-16 rounded-full bg-[#72f0a8]/10 border border-[#72f0a8]/20 flex items-center justify-center text-[#72f0a8]">
+              <div className="py-12 px-4 text-center animate-fade-in relative z-10">
+                <div className="mx-auto size-16 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
                   <CheckCircle2 className="size-8" />
                 </div>
                 <h3 className="mt-6 text-2xl font-bold tracking-tight text-white">
@@ -110,21 +132,50 @@ export function Contact() {
                 </p>
                 <button
                   onClick={() => setSubmitStatus("idle")}
-                  className="mt-8 inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-6 py-3 text-xs font-bold uppercase tracking-wider text-white hover:bg-white/10"
+                  className="mt-8 inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-6 py-3 text-xs font-bold uppercase tracking-wider text-white hover:bg-white/10 cursor-pointer"
                 >
                   Submit Another Brief
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="border-b border-white/5 pb-4 mb-4 flex items-center gap-2 text-[#72f0a8]">
+              <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
+                <div className="border-b border-white/5 pb-4 mb-4 flex items-center gap-2 text-emerald-400">
                   <Sparkles className="size-4 animate-pulse" />
                   <span className="text-[10px] font-bold uppercase tracking-widest font-mono text-white/40">
-                    Project Request Form
+                    Lead Specification Panel
                   </span>
                 </div>
 
-                <div className="grid gap-4 sm:grid-cols-2">
+                {/* Dynamic Cart Synchronizer (Selected Capabilities selection) */}
+                <div className="space-y-3.5">
+                  <span className="font-mono text-[9px] uppercase tracking-widest text-emerald-400 block font-bold">
+                    Select Capabilities Required (Estimator Cart)
+                  </span>
+                  <div className="flex flex-wrap gap-2">
+                    {services.map((service, idx) => {
+                      const isSelected = selectedCartServices.includes(service.title);
+                      return (
+                        <button
+                          type="button"
+                          key={idx}
+                          onClick={() => onToggleCartService(service.title)}
+                          className={`px-3 py-1.5 rounded-lg font-display text-xs font-medium border transition-all cursor-pointer ${
+                            isSelected
+                              ? "bg-emerald-500/15 text-emerald-400 border-emerald-500/40 shadow-[0_0_12px_rgba(16,185,129,0.15)]"
+                              : "bg-white/[0.02] text-white/60 border-white/10 hover:border-white/25 hover:text-white"
+                          }`}
+                        >
+                          {service.title}
+                        </button>
+                      );
+                    })}
+                  </div>
+                  <span className="font-sans text-[10px] text-white/40 block italic mt-1">
+                    *Tip: Adding capabilities pre-hydrates estimator briefs for accurate review times.
+                  </span>
+                </div>
+
+                <div className="grid gap-4 sm:grid-cols-2 mt-2">
                   <div>
                     <label htmlFor="name" className="block text-[10px] font-bold uppercase tracking-wider text-white/45 mb-1.5 font-mono">
                       Your Name
@@ -135,8 +186,8 @@ export function Contact() {
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      placeholder="e.g. Windhoek Founder"
-                      className="w-full rounded-xl border border-white/10 bg-[#030706]/60 px-4 py-3 text-xs text-white placeholder-white/20 focus:border-[#72f0a8]/50 focus:outline-none transition"
+                      placeholder="e.g. Setson Nangolo"
+                      className="w-full rounded-xl border border-white/10 bg-[#050508]/60 px-4 py-3 text-xs text-white placeholder-white/20 focus:border-emerald-500/50 focus:outline-none transition"
                     />
                   </div>
                   <div>
@@ -150,7 +201,7 @@ export function Contact() {
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                       placeholder="e.g. Tourism Portal Ltd"
-                      className="w-full rounded-xl border border-white/10 bg-[#030706]/60 px-4 py-3 text-xs text-white placeholder-white/20 focus:border-[#72f0a8]/50 focus:outline-none transition"
+                      className="w-full rounded-xl border border-white/10 bg-[#050508]/60 px-4 py-3 text-xs text-white placeholder-white/20 focus:border-emerald-500/50 focus:outline-none transition"
                     />
                   </div>
                 </div>
@@ -167,7 +218,7 @@ export function Contact() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="briefs@company.com"
-                      className="w-full rounded-xl border border-white/10 bg-[#030706]/60 px-4 py-3 text-xs text-white placeholder-white/20 focus:border-[#72f0a8]/50 focus:outline-none transition"
+                      className="w-full rounded-xl border border-white/10 bg-[#050508]/60 px-4 py-3 text-xs text-white placeholder-white/20 focus:border-emerald-500/50 focus:outline-none transition"
                     />
                   </div>
                   <div>
@@ -181,35 +232,9 @@ export function Contact() {
                       value={formData.whatsapp}
                       onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
                       placeholder="e.g. +264 81..."
-                      className="w-full rounded-xl border border-white/10 bg-[#030706]/60 px-4 py-3 text-xs text-white placeholder-white/20 focus:border-[#72f0a8]/50 focus:outline-none transition"
+                      className="w-full rounded-xl border border-white/10 bg-[#050508]/60 px-4 py-3 text-xs text-white placeholder-white/20 focus:border-emerald-500/50 focus:outline-none transition"
                     />
                   </div>
-                </div>
-
-                <div>
-                  <label htmlFor="serviceNeeded" className="block text-[10px] font-bold uppercase tracking-wider text-white/45 mb-1.5 font-mono">
-                    Service Needed
-                  </label>
-                  <select
-                    id="serviceNeeded"
-                    required
-                    value={formData.serviceNeeded}
-                    onChange={(e) => setFormData({ ...formData, serviceNeeded: e.target.value })}
-                    className="w-full rounded-xl border border-white/10 bg-[#030706]/65 px-4 py-3 text-xs text-white focus:border-[#72f0a8]/50 focus:outline-none transition appearance-none"
-                    style={{ backgroundImage: "url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2212%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22rgba(255,255,255,0.4)%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpolyline points=%226 9 12 15 18 9%22%3E%3C/polyline%3E%3C/svg%3E')", backgroundPosition: "right 1rem center", backgroundRepeat: "no-repeat" }}
-                  >
-                    <option value="" disabled className="bg-[#030706]">Select Service...</option>
-                    <option value="Website" className="bg-[#030706]">Website & Digital Presence</option>
-                    <option value="Software System" className="bg-[#030706]">Software & Business Systems</option>
-                    <option value="AI Automation" className="bg-[#030706]">AI Workflow Automation</option>
-                    <option value="Product/MVP" className="bg-[#030706]">Product Design & MVP Sprint</option>
-                    <option value="Branding" className="bg-[#030706]">Brand Identity & Graphic Assets</option>
-                    <option value="Marketing" className="bg-[#030706]">Digital Marketing & Funnels</option>
-                    <option value="Research" className="bg-[#030706]">Market Strategy & Competitor Research</option>
-                    <option value="Event Digital Package" className="bg-[#030706]">Event Digital Partner Package</option>
-                    <option value="FinTech/Product Concept" className="bg-[#030706]">Fintech Solutions Prototype</option>
-                    <option value="Other" className="bg-[#030706]">Other / Custom Venture</option>
-                  </select>
                 </div>
 
                 <div className="grid gap-4 sm:grid-cols-2">
@@ -222,16 +247,13 @@ export function Contact() {
                       required
                       value={formData.budgetRange}
                       onChange={(e) => setFormData({ ...formData, budgetRange: e.target.value })}
-                      className="w-full rounded-xl border border-white/10 bg-[#030706]/65 px-4 py-3 text-xs text-white focus:border-[#72f0a8]/50 focus:outline-none transition appearance-none"
+                      className="w-full rounded-xl border border-white/10 bg-[#050508]/65 px-4 py-3 text-xs text-white focus:border-emerald-500/50 focus:outline-none transition appearance-none cursor-pointer"
                       style={{ backgroundImage: "url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2212%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22rgba(255,255,255,0.4)%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpolyline points=%226 9 12 15 18 9%22%3E%3C/polyline%3E%3C/svg%3E')", backgroundPosition: "right 1rem center", backgroundRepeat: "no-repeat" }}
                     >
-                      <option value="" disabled className="bg-[#030706]">Select Budget...</option>
-                      <option value="Under N$3,500" className="bg-[#030706]">Under N$3,500</option>
-                      <option value="N$3,500 - N$7,500" className="bg-[#030706]">N$3,500 – N$7,500</option>
-                      <option value="N$7,500 - N$15,000" className="bg-[#030706]">N$7,500 – N$15,000</option>
-                      <option value="N$15,000 - N$35,000" className="bg-[#030706]">N$15,000 – N$35,000</option>
-                      <option value="N$35,000+" className="bg-[#030706]">N$35,000+</option>
-                      <option value="Not sure yet" className="bg-[#030706]">Not sure / Flexible</option>
+                      <option value="" disabled className="bg-[#050508]">Select Budget...</option>
+                      {budgetOptions.map(opt => (
+                        <option key={opt} value={opt} className="bg-[#050508]">{opt}</option>
+                      ))}
                     </select>
                   </div>
                   <div>
@@ -243,15 +265,13 @@ export function Contact() {
                       required
                       value={formData.timeline}
                       onChange={(e) => setFormData({ ...formData, timeline: e.target.value })}
-                      className="w-full rounded-xl border border-white/10 bg-[#030706]/65 px-4 py-3 text-xs text-white focus:border-[#72f0a8]/50 focus:outline-none transition appearance-none"
+                      className="w-full rounded-xl border border-white/10 bg-[#050508]/65 px-4 py-3 text-xs text-white focus:border-emerald-500/50 focus:outline-none transition appearance-none cursor-pointer"
                       style={{ backgroundImage: "url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2212%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22rgba(255,255,255,0.4)%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpolyline points=%226 9 12 15 18 9%22%3E%3C/polyline%3E%3C/svg%3E')", backgroundPosition: "right 1rem center", backgroundRepeat: "no-repeat" }}
                     >
-                      <option value="" disabled className="bg-[#030706]">Select Timeline...</option>
-                      <option value="Urgent" className="bg-[#030706]">Urgent (less than 2 weeks)</option>
-                      <option value="2-4 weeks" className="bg-[#030706]">2 – 4 weeks</option>
-                      <option value="1-2 months" className="bg-[#030706]">1 – 2 months</option>
-                      <option value="2+ months" className="bg-[#030706]">2+ months / Long-term</option>
-                      <option value="Flexible" className="bg-[#030706]">Flexible</option>
+                      <option value="" disabled className="bg-[#050508]">Select Timeline...</option>
+                      {timelineOptions.map(opt => (
+                        <option key={opt} value={opt} className="bg-[#050508]">{opt}</option>
+                      ))}
                     </select>
                   </div>
                 </div>
@@ -267,21 +287,14 @@ export function Contact() {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Describe what systems or features you are looking to design, build, or automate..."
-                    className="w-full rounded-xl border border-white/10 bg-[#030706]/60 px-4 py-3 text-xs text-white placeholder-white/20 focus:border-[#72f0a8]/50 focus:outline-none transition resize-none"
+                    className="w-full rounded-xl border border-white/10 bg-[#050508]/60 px-4 py-3 text-xs text-white placeholder-white/20 focus:border-emerald-500/50 focus:outline-none transition resize-none"
                   />
-                </div>
-
-                {/* Optional brief upload placeholder */}
-                <div className="rounded-xl border border-dashed border-white/10 bg-white/[0.01] p-4 text-center">
-                  <span className="text-[10px] text-white/35 font-mono">
-                    Drag and drop brief or RFP files (Optional Visual Placeholder)
-                  </span>
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-[#72f0a8] py-4 text-xs font-bold uppercase tracking-wider text-[#030706] hover:bg-[#d9ff73] transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-[0_0_20px_rgba(114,240,168,0.2)] hover:shadow-[0_0_25px_rgba(217,255,115,0.4)]"
+                  className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-blue-500 py-4 text-xs font-bold uppercase tracking-wider text-white hover:from-emerald-400 hover:to-blue-400 transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-[0_0_20px_rgba(16,185,129,0.2)] cursor-pointer"
                 >
                   {isSubmitting ? (
                     "Filing Request..."

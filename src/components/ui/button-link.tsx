@@ -1,4 +1,4 @@
-import type { ComponentPropsWithoutRef } from "react";
+﻿import type { ComponentPropsWithoutRef } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
@@ -8,11 +8,11 @@ type ButtonLinkProps = ComponentPropsWithoutRef<typeof Link> & {
 
 const styles = {
   primary:
-    "bg-[#72f0a8] text-[#030706] hover:bg-[#d9ff73] focus-visible:outline-[#72f0a8]",
+    "bg-[#10b981] text-[#030706] hover:bg-[#10b981] focus-visible:outline-[#10b981]",
   secondary:
-    "border border-white/15 bg-white/5 text-white hover:border-[#72f0a8]/40 hover:bg-white/10 focus-visible:outline-white",
+    "border border-white/15 bg-white/5 text-white hover:border-[#10b981]/40 hover:bg-white/10 focus-visible:outline-white",
   ghost:
-    "text-[#72f0a8] hover:text-[#d9ff73] focus-visible:outline-[#72f0a8]",
+    "text-[#10b981] hover:text-[#10b981] focus-visible:outline-[#10b981]",
 };
 
 export function ButtonLink({

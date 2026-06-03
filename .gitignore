@@ -28,3 +28,6 @@ Thumbs.db
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Exported files
+id8-technologies.comv1/

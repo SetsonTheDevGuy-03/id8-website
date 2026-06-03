@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { Bot, Code, Cpu, Landmark, Megaphone, Search, Shapes, Sparkles } from "lucide-react";
@@ -41,7 +41,7 @@ export function TrustStrip() {
             const Icon = item.icon;
             return (
               <div key={index} className="flex items-center gap-2.5">
-                <Icon className="size-4 text-[#72f0a8]/60" />
+                <Icon className="size-4 text-[#10b981]/60" />
                 <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/55">
                   {item.label}
                 </span>

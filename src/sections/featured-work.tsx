@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { ArrowUpRight, Calendar, Layers, ListChecks } from "lucide-react";
@@ -16,7 +16,7 @@ export function FeaturedWork() {
   return (
     <Section id="work" className="relative overflow-hidden border-b border-white/5">
       {/* Decorative gradient glow */}
-      <div className="absolute top-1/2 left-0 -z-10 size-[32rem] rounded-full bg-[#72f0a8]/3 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-0 -z-10 size-[32rem] rounded-full bg-[#10b981]/3 blur-[120px] pointer-events-none" />
 
       <SectionHeading
         eyebrow="Proof & Case Studies"
@@ -28,19 +28,19 @@ export function FeaturedWork() {
         {featuredList.map((project, index) => (
           <Reveal key={project.slug} delay={index * 0.05} className="h-full">
             <GlassCard
-              className="flex flex-col justify-between h-full overflow-hidden border-white/5 bg-[#030706]/60 hover:border-[#72f0a8]/25 p-6 group hover:bg-[#06120d]/40 transition duration-300"
+              className="flex flex-col justify-between h-full overflow-hidden border-white/5 bg-[#030706]/60 hover:border-[#10b981]/25 p-6 group hover:bg-[#06120d]/40 transition duration-300"
               onClick={() => setActiveProject(activeProject === project.slug ? null : project.slug)}
             >
               <div>
                 {/* Category & Tags */}
                 <div className="flex flex-wrap gap-2">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#72f0a8] bg-[#72f0a8]/5 px-2.5 py-1 rounded-md border border-[#72f0a8]/10">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#10b981] bg-[#10b981]/5 px-2.5 py-1 rounded-md border border-[#10b981]/10">
                     {project.category}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h3 className="mt-5 text-xl font-bold tracking-tight text-white group-hover:text-[#72f0a8] transition duration-200">
+                <h3 className="mt-5 text-xl font-bold tracking-tight text-white group-hover:text-[#10b981] transition duration-200">
                   {project.title}
                 </h3>
 
@@ -51,7 +51,7 @@ export function FeaturedWork() {
 
                 {/* Click to expand details indicator */}
                 <button 
-                  className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#72f0a8]/80 hover:text-[#d9ff73] transition flex items-center gap-1 focus:outline-none"
+                  className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[#10b981]/80 hover:text-[#10b981] transition flex items-center gap-1 focus:outline-none"
                   aria-expanded={activeProject === project.slug}
                 >
                   {activeProject === project.slug ? "Hide Challenge & Stack" : "Show Challenge & Stack"}
@@ -63,19 +63,19 @@ export function FeaturedWork() {
                   <div className="mt-5 pt-4 border-t border-white/5 space-y-4 animate-fade-in text-left">
                     <div>
                       <p className="text-[10px] font-bold uppercase tracking-wider text-white/35 flex items-center gap-1.5">
-                        <Layers className="size-3 text-[#72f0a8]" /> The Challenge
+                        <Layers className="size-3 text-[#10b981]" /> The Challenge
                       </p>
                       <p className="mt-1 text-[11px] leading-4 text-white/70">{project.challenge}</p>
                     </div>
 
                     <div>
                       <p className="text-[10px] font-bold uppercase tracking-wider text-white/35 flex items-center gap-1.5">
-                        <ListChecks className="size-3 text-[#72f0a8]" /> Deliverables
+                        <ListChecks className="size-3 text-[#10b981]" /> Deliverables
                       </p>
                       <ul className="mt-1 space-y-1">
                         {project.deliverables.map((del, dIdx) => (
                           <li key={dIdx} className="text-[11px] text-white/60 flex items-center gap-1.5">
-                            <span className="size-1 rounded-full bg-[#72f0a8]" />
+                            <span className="size-1 rounded-full bg-[#10b981]" />
                             <span>{del}</span>
                           </li>
                         ))}
@@ -86,7 +86,7 @@ export function FeaturedWork() {
                       <div>
                         <p className="text-[9px] font-bold uppercase tracking-wider text-white/35">Timeline</p>
                         <p className="text-[10px] font-semibold text-white/85 flex items-center gap-1 mt-0.5">
-                          <Calendar className="size-3 text-[#72f0a8]" /> {project.timeline}
+                          <Calendar className="size-3 text-[#10b981]" /> {project.timeline}
                         </p>
                       </div>
                       <div>
@@ -103,9 +103,9 @@ export function FeaturedWork() {
               {/* Action Button Link */}
               <div className="mt-8 border-t border-white/5 pt-4.5 flex items-center justify-between">
                 <span className="text-[10px] font-bold uppercase tracking-wider text-white/40 group-hover:text-white transition">
-                  {project.tags.slice(0, 2).join(" · ")}
+                  {project.tags.slice(0, 2).join(" Â· ")}
                 </span>
-                <span className="inline-flex items-center gap-1 text-xs font-bold text-[#72f0a8] group-hover:text-[#d9ff73] transition">
+                <span className="inline-flex items-center gap-1 text-xs font-bold text-[#10b981] group-hover:text-[#10b981] transition">
                   {project.ctaText}
                   <ArrowUpRight className="size-3.5" />
                 </span>
