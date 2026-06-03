@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+}
+
+
+:root {
+  --background-main: #030706;
+  --background-deep: #06120d;
+  --background-card: rgba(255, 255, 255, 0.04);
+  --background-card-hover: rgba(255, 255, 255, 0.07);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-glow: rgba(114, 240, 168, 0.28);
+  --green-primary: #72f0a8;
+  --green-brand: #74930d;
+  --lime-accent: #d9ff73;
+  --cyan-tech: #22d3ee;
+  --text-primary: #f4fff8;
+  --text-secondary: rgba(244, 255, 248, 0.72);
+  --text-muted: rgba(244, 255, 248, 0.52);
+  --text-disabled: rgba(244, 255, 248, 0.32);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--background-main);
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(114, 240, 168, 0.14) 0%, transparent 45rem),
+    radial-gradient(circle at 0% 60%, rgba(34, 211, 238, 0.05) 0%, transparent 40rem),
+    radial-gradient(circle at 100% 80%, rgba(217, 255, 115, 0.05) 0%, transparent 40rem),
+    linear-gradient(180deg, var(--background-main) 0%, var(--background-deep) 100%);
+  color: var(--text-primary);
+  font-family: "Geist", "Inter", "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-geist), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background-main);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  border: 2px solid var(--background-main);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--green-primary);
+}
+
+/* Custom Selection */
+::selection {
+  background: rgba(114, 240, 168, 0.22);
+  color: var(--text-primary);
+}
+
+/* Reusable custom utilities */
+.bg-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+.text-gradient-green {
+  background: linear-gradient(135deg, #72f0a8 0%, #d9ff73 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #22d3ee 0%, #72f0a8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #fdba74 0%, #d9ff73 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-card {
+  background: var(--background-card);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(20px);
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  transition: all 300ms ease;
+}
+
+.glass-card:hover {
+  background: var(--background-card-hover);
+  border-color: rgba(114, 240, 168, 0.25);
+  transform: translateY(-4px);
+}
+
+/* Reduced motion settings */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
