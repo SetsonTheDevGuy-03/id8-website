@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { navigation } from "@/data/navigation";
 import { Container } from "@/components/ui/container";
@@ -36,11 +37,18 @@ export function SiteHeader() {
       <Container className="flex items-center justify-between gap-6">
         <Link
           href="/"
-          className="text-lg font-bold tracking-[-0.04em] text-white flex items-center gap-2 group"
+          className="text-lg font-bold tracking-[-0.04em] text-white flex items-center gap-2.5 group"
         >
-          <span className="inline-block size-3.5 rounded-sm bg-gradient-to-tr from-[#10b981] to-[#10b981] transition duration-300 group-hover:rotate-45" />
+          <div className="relative size-6 shrink-0 transition duration-300 group-hover:scale-110">
+            <Image
+              src="/images/id8_cube_hero.png"
+              alt="ID8 Logo Cube"
+              fill
+              className="object-contain"
+            />
+          </div>
           <span>
-            ID8 <span className="text-[#10b981] font-medium">Technologies</span>
+            ID8 <span className="text-blue-400 font-medium">Technologies</span>
           </span>
         </Link>
 
@@ -61,11 +69,11 @@ export function SiteHeader() {
         <div className="hidden items-center gap-4 md:flex">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-1.5 rounded-full bg-[#10b981] px-4.5 py-2 text-xs font-bold uppercase tracking-wider text-[#030706] hover:bg-[#10b981] transition duration-300 shadow-[0_0_20px_rgba(114,240,168,0.2)] hover:shadow-[0_0_25px_rgba(217,255,115,0.4)]"
+            className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/5 hover:bg-blue-500/15 text-white px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition duration-300 shadow-[0_0_20px_rgba(59,130,246,0.15)] hover:border-blue-500/50"
           >
-            Start a Project
+            Contact us
             {selectedCartServices.length > 0 && (
-              <span className="ml-1 px-1.5 py-0.5 text-[9px] font-black bg-white rounded-full text-black">
+              <span className="px-1.5 py-0.5 text-[9px] font-black bg-white rounded-full text-black">
                 {selectedCartServices.length}
               </span>
             )}
@@ -101,11 +109,11 @@ export function SiteHeader() {
             <Link
               href="/contact"
               onClick={() => setIsOpen(false)}
-              className="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-[#10b981] px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-[#030706] hover:bg-[#10b981] transition duration-300"
+              className="mt-4 inline-flex items-center justify-center gap-2 rounded-full border border-blue-500/35 bg-blue-500/10 px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-white hover:bg-blue-500/20 transition duration-300 shadow-[0_0_20px_rgba(59,130,246,0.15)]"
             >
-              Start a Project
+              Contact us
               {selectedCartServices.length > 0 && (
-                <span className="ml-1 px-1.5 py-0.5 text-[10px] font-black bg-white rounded-full text-black">
+                <span className="px-1.5 py-0.5 text-[10px] font-black bg-white rounded-full text-black">
                   {selectedCartServices.length}
                 </span>
               )}
