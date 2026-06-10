@@ -1,6 +1,8 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { CartProvider } from "@/context/CartContext";
+
 
 const inter = Inter({
   subsets: ["latin"],
@@ -49,7 +51,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}>
-      <body className="font-sans antialiased bg-[#050508] text-white selection:bg-[#3b82f6]/40">{children}</body>
+      <body className="font-sans antialiased bg-[#050508] text-white selection:bg-[#3b82f6]/40">
+        <CartProvider>
+          {children}
+        </CartProvider>
+      </body>
     </html>
   );
 }

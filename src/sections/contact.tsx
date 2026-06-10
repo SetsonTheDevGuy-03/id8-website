@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { ArrowRight, CheckCircle2, MessageSquare, Send, Sparkles } from "lucide-react";
@@ -8,12 +8,11 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { GlassCard } from "@/components/ui/glass-card";
 import { services } from "@/data/services";
 
-type ContactProps = {
-  selectedCartServices: string[];
-  onToggleCartService: (serviceTitle: string) => void;
-};
+import { useCart } from "@/context/CartContext";
 
-export function Contact({ selectedCartServices, onToggleCartService }: ContactProps) {
+export function Contact() {
+  const { selectedCartServices, toggleCartService } = useCart();
+
   const [formData, setFormData] = useState({
     name: "",
     company: "",
@@ -158,7 +157,7 @@ export function Contact({ selectedCartServices, onToggleCartService }: ContactPr
                         <button
                           type="button"
                           key={idx}
-                          onClick={() => onToggleCartService(service.title)}
+                          onClick={() => toggleCartService(service.title)}
                           className={`px-3 py-1.5 rounded-lg font-display text-xs font-medium border transition-all cursor-pointer ${
                             isSelected
                               ? "bg-emerald-500/15 text-emerald-400 border-emerald-500/40 shadow-[0_0_12px_rgba(16,185,129,0.15)]"

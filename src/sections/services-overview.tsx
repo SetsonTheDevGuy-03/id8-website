@@ -4,16 +4,12 @@ import { useState } from "react";
 import { services } from "@/data/services";
 import { Check, ArrowRight, Sparkles, FolderPlus, Trash2, HeartHandshake, Layers } from "lucide-react";
 
-interface ServicesOverviewProps {
-  selectedCartServices: string[];
-  onToggleCartService: (serviceTitle: string) => void;
-}
+import { useCart } from "@/context/CartContext";
 
-export function ServicesOverview({
-  selectedCartServices,
-  onToggleCartService,
-}: ServicesOverviewProps) {
+export function ServicesOverview() {
+  const { selectedCartServices, toggleCartService } = useCart();
   const [activeServiceId, setActiveServiceId] = useState<string>(services[0].id);
+
 
   const activeService = services.find((s) => s.id === activeServiceId) || services[0];
 
@@ -133,7 +129,7 @@ export function ServicesOverview({
 
                 {/* Add to Cartesian estimate button */}
                 <button
-                  onClick={() => onToggleCartService(activeService.title)}
+                  onClick={() => toggleCartService(activeService.title)}
                   className={`px-4.5 py-2 rounded-full font-sans text-xs font-semibold transition-all flex items-center gap-1.5 cursor-pointer ${
                     selectedCartServices.includes(activeService.title)
                       ? "bg-red-500/10 text-red-400 border border-red-500/20 hover:bg-red-500/15"

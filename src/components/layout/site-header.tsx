@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -6,9 +6,12 @@ import { ArrowUpRight, Menu, X } from "lucide-react";
 import { navigation } from "@/data/navigation";
 import { Container } from "@/components/ui/container";
 
+import { useCart } from "@/context/CartContext";
+
 export function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { selectedCartServices } = useCart();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,10 +60,15 @@ export function SiteHeader() {
         {/* Desktop CTA */}
         <div className="hidden items-center gap-4 md:flex">
           <Link
-            href="#contact"
+            href="/contact"
             className="inline-flex items-center gap-1.5 rounded-full bg-[#10b981] px-4.5 py-2 text-xs font-bold uppercase tracking-wider text-[#030706] hover:bg-[#10b981] transition duration-300 shadow-[0_0_20px_rgba(114,240,168,0.2)] hover:shadow-[0_0_25px_rgba(217,255,115,0.4)]"
           >
             Start a Project
+            {selectedCartServices.length > 0 && (
+              <span className="ml-1 px-1.5 py-0.5 text-[9px] font-black bg-white rounded-full text-black">
+                {selectedCartServices.length}
+              </span>
+            )}
             <ArrowUpRight aria-hidden="true" className="size-3.5" />
           </Link>
         </div>
@@ -91,11 +99,16 @@ export function SiteHeader() {
               </Link>
             ))}
             <Link
-              href="#contact"
+              href="/contact"
               onClick={() => setIsOpen(false)}
               className="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-[#10b981] px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-[#030706] hover:bg-[#10b981] transition duration-300"
             >
               Start a Project
+              {selectedCartServices.length > 0 && (
+                <span className="ml-1 px-1.5 py-0.5 text-[10px] font-black bg-white rounded-full text-black">
+                  {selectedCartServices.length}
+                </span>
+              )}
               <ArrowUpRight aria-hidden="true" className="size-4" />
             </Link>
           </nav>
