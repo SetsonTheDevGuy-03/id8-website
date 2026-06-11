@@ -56,7 +56,7 @@ export function SiteHeader() {
         <nav className="hidden items-center gap-8 md:flex" aria-label="Primary navigation">
           {navigation.map((item) => (
             <Link
-              key={item.href}
+              key={item.label}
               href={item.href}
               className="text-sm font-medium text-white/70 hover:text-[#10b981] transition duration-200"
             >
@@ -98,7 +98,7 @@ export function SiteHeader() {
           <nav className="flex flex-col gap-6 p-8 border-t border-white/5">
             {navigation.map((item) => (
               <Link
-                key={item.href}
+                key={item.label}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
                 className="text-lg font-medium text-white/80 hover:text-[#10b981] transition duration-200"
