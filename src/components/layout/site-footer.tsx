@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { ArrowUpRight, Github, Linkedin, MessageSquare, Twitter } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { navigation } from "@/data/navigation";
@@ -15,10 +15,16 @@ export function SiteFooter() {
         <div className="grid gap-12 lg:grid-cols-4 md:grid-cols-2">
           {/* Logo & Founding Brief */}
           <div className="flex flex-col gap-5">
-            <Link href="/" className="text-xl font-bold tracking-[-0.04em] text-white flex items-center gap-2">
-              <span className="size-3.5 rounded-sm bg-gradient-to-tr from-[#10b981] to-[#10b981]" />
+            <Link href="/" className="text-xl font-bold tracking-[-0.04em] text-white flex items-center gap-2.5 group">
+              <div className="relative size-5 shrink-0 transition duration-300 group-hover:scale-110">
+                <img
+                  src="/images/id8_cube_hero.png"
+                  alt="ID8 Logo Cube"
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <span>
-                ID8 <span className="text-[#10b981] font-medium">Technologies</span>
+                ID8 <span className="text-blue-400 font-medium">Technologies</span>
               </span>
             </Link>
             <p className="text-sm leading-6 text-white/55">
@@ -30,7 +36,7 @@ export function SiteFooter() {
                 href="https://linkedin.com/company/id8-technologies"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="size-9 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-[#10b981] hover:border-[#10b981]/30 bg-white/3 transition duration-200"
+                className="size-9 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-blue-400 hover:border-blue-500/30 bg-white/3 transition duration-200"
                 aria-label="LinkedIn Profile"
               >
                 <Linkedin className="size-4" />
@@ -39,7 +45,7 @@ export function SiteFooter() {
                 href="https://github.com/id8-technologies"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="size-9 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-[#10b981] hover:border-[#10b981]/30 bg-white/3 transition duration-200"
+                className="size-9 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-blue-400 hover:border-blue-500/30 bg-white/3 transition duration-200"
                 aria-label="GitHub Account"
               >
                 <Github className="size-4" />
@@ -48,7 +54,7 @@ export function SiteFooter() {
                 href="https://twitter.com/id8_tech"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="size-9 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-[#10b981] hover:border-[#10b981]/30 bg-white/3 transition duration-200"
+                className="size-9 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-blue-400 hover:border-blue-500/30 bg-white/3 transition duration-200"
                 aria-label="Twitter Account"
               >
                 <Twitter className="size-4" />
@@ -57,7 +63,7 @@ export function SiteFooter() {
                 href="https://wa.me/264812345678"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="size-9 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-[#10b981] hover:border-[#10b981]/30 bg-white/3 transition duration-200"
+                className="size-9 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-blue-400 hover:border-blue-500/30 bg-white/3 transition duration-200"
                 aria-label="WhatsApp Contact"
               >
                 <MessageSquare className="size-4" />
@@ -71,16 +77,16 @@ export function SiteFooter() {
             <nav className="flex flex-col gap-2.5" aria-label="Footer navigation">
               {navigation.map((item) => (
                 <Link
-                  key={item.href}
+                  key={item.label}
                   href={item.href}
-                  className="text-sm text-white/60 hover:text-[#10b981] transition duration-150"
+                  className="text-sm text-white/60 hover:text-blue-400 transition duration-150"
                 >
                   {item.label}
                 </Link>
               ))}
               <Link
-                href="#contact"
-                className="text-sm text-white/60 hover:text-[#10b981] transition duration-150 flex items-center gap-1"
+                href="/contact"
+                className="text-sm text-white/60 hover:text-blue-400 transition duration-150 flex items-center gap-1"
               >
                 Start a Project <ArrowUpRight className="size-3" />
               </Link>
