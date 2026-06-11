@@ -8,6 +8,7 @@ import { navigation } from "@/data/navigation";
 import { Container } from "@/components/ui/container";
 
 import { useCart } from "@/context/CartContext";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 export function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,10 +30,9 @@ export function SiteHeader() {
   return (
     <header
       className={`sticky top-0 z-50 transition-all duration-300 border-b ${
-        scrolled
-          ? "border-white/10 bg-[#030706]/85 backdrop-blur-xl py-3 shadow-[0_4px_30px_rgba(0,0,0,0.4)]"
-          : "border-transparent bg-transparent py-5"
+        scrolled ? "backdrop-blur-xl py-3 shadow-[0_4px_20px_rgba(0,0,0,0.1)]" : "border-transparent bg-transparent py-5"
       }`}
+      style={scrolled ? { borderColor: "var(--border-subtle)", background: "color-mix(in srgb, var(--bg-main) 88%, transparent)" } : {}}
     >
       <Container className="flex items-center justify-between gap-6">
         <Link
@@ -66,7 +66,8 @@ export function SiteHeader() {
         </nav>
 
         {/* Desktop CTA */}
-        <div className="hidden items-center gap-4 md:flex">
+        <div className="hidden items-center gap-3 md:flex">
+          <ThemeToggle />
           <Link
             href="/contact"
             className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/5 hover:bg-blue-500/15 text-white px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition duration-300 shadow-[0_0_20px_rgba(59,130,246,0.15)] hover:border-blue-500/50"
@@ -94,14 +95,15 @@ export function SiteHeader() {
 
       {/* Mobile drawer overlay */}
       {isOpen && (
-        <div className="fixed inset-0 top-[60px] z-40 bg-[#030706]/98 backdrop-blur-md md:hidden animate-fade-in">
-          <nav className="flex flex-col gap-6 p-8 border-t border-white/5">
+        <div className="fixed inset-0 top-[60px] z-40 backdrop-blur-md md:hidden animate-fade-in" style={{ background: "var(--bg-deep)" }}>
+          <nav className="flex flex-col gap-6 p-8 border-t" style={{ borderColor: "var(--border-subtle)" }}>
             {navigation.map((item) => (
               <Link
                 key={item.label}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="text-lg font-medium text-white/80 hover:text-[#10b981] transition duration-200"
+                className="text-lg font-medium transition duration-200"
+                style={{ color: "var(--text-secondary)" }}
               >
                 {item.label}
               </Link>
@@ -119,6 +121,13 @@ export function SiteHeader() {
               )}
               <ArrowUpRight aria-hidden="true" className="size-4" />
             </Link>
+            {/* Theme toggle in mobile drawer */}
+            <div className="flex items-center gap-3 mt-2 pt-4" style={{ borderTop: "1px solid var(--border-subtle)" }}>
+              <ThemeToggle />
+              <span className="text-sm font-medium" style={{ color: "var(--text-muted)" }}>
+                Toggle theme
+              </span>
+            </div>
           </nav>
         </div>
       )}

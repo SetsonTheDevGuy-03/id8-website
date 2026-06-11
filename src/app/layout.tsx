@@ -1,27 +1,11 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
-
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-display",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-});
+import { ThemeProvider } from "@/context/ThemeContext";
 
 export const metadata: Metadata = {
   title: {
-    default: "ID8 Technologies | Digital Systems Studio â€” Namibia",
+    default: "ID8 Technologies | Digital Systems Studio – Namibia",
     template: "%s | ID8 Technologies",
   },
   description:
@@ -50,12 +34,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}>
-      <body className="font-sans antialiased bg-[#050508] text-white selection:bg-[#3b82f6]/40">
-        <CartProvider>
-          {children}
-        </CartProvider>
+    <html lang="en">
+      <body className="font-sans antialiased selection:bg-blue-500/30">
+        <ThemeProvider>
+          <CartProvider>
+            {children}
+          </CartProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
 }
+
+
