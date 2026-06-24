@@ -35,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans antialiased selection:bg-blue-500/30">
+      <body className="font-sans antialiased selection:bg-blue-500/30" suppressHydrationWarning>
         <ThemeProvider>
           <CartProvider>
             {children}
