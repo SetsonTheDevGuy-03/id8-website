@@ -43,16 +43,35 @@ export function Contact() {
     "Flexible"
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus("idle");
 
-    // Simulate submission delay
-    setTimeout(() => {
+    try {
+      const payload = {
+        ...formData,
+        services: selectedCartServices,
+      };
+
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (res.ok) {
+        setSubmitStatus("success");
+      } else {
+        console.error("Contact submit failed", await res.text());
+        setSubmitStatus("error");
+      }
+    } catch (err) {
+      console.error(err);
+      setSubmitStatus("error");
+    } finally {
       setIsSubmitting(false);
-      setSubmitStatus("success");
-      console.log("Form submission data:", { ...formData, services: selectedCartServices });
-    }, 1200);
+    }
   };
 
   return (
