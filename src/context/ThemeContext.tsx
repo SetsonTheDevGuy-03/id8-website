@@ -17,15 +17,19 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   // On first mount, read from localStorage or system preference
   useEffect(() => {
-    const stored = localStorage.getItem("id8-theme") as Theme | null;
-    if (stored === "light" || stored === "dark") {
-      setTheme(stored);
-    } else {
-      // Respect system preference as the default
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      setTheme(prefersDark ? "dark" : "light");
-    }
-    setMounted(true);
+    const timeoutId = window.setTimeout(() => {
+      const stored = localStorage.getItem("id8-theme") as Theme | null;
+      if (stored === "light" || stored === "dark") {
+        setTheme(stored);
+      } else {
+        // Respect system preference as the default
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        setTheme(prefersDark ? "dark" : "light");
+      }
+      setMounted(true);
+    }, 0);
+
+    return () => window.clearTimeout(timeoutId);
   }, []);
 
   // Apply or remove 'dark' class on <html> whenever theme changes

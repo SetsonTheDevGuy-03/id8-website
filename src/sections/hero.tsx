@@ -62,8 +62,10 @@ export function Hero() {
     if (!isDeleting && currentText === fullWord) {
       timer = setTimeout(() => setIsDeleting(true), 1500);
     } else if (isDeleting && currentText === "") {
-      setIsDeleting(false);
-      setWordIndex((prev) => (prev + 1) % words.length);
+      timer = setTimeout(() => {
+        setIsDeleting(false);
+        setWordIndex((prev) => (prev + 1) % words.length);
+      }, 50);
     }
 
     return () => clearTimeout(timer);

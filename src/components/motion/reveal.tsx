@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import { useState, useEffect, type ReactNode } from "react";
+import { useSyncExternalStore, type ReactNode } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 
 type RevealProps = {
@@ -11,11 +11,11 @@ type RevealProps = {
 
 export function Reveal({ children, className, delay = 0 }: RevealProps) {
   const reduceMotion = useReducedMotion();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  );
 
   // Before hydration or when reduce motion is requested: always show content plainly
   if (!mounted || reduceMotion) {
