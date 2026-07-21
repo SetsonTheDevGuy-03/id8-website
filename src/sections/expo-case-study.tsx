@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { Award, CalendarDays, CheckCircle2, Cpu, Sparkles, Trophy, Users } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
@@ -35,11 +35,11 @@ export function ExpoCaseStudy() {
             </h2>
 
             <p className="mt-3 text-xs font-bold uppercase tracking-widest text-[#10b981]">
-              Event Digital Partner Â· Brand Systems Â· Social Content Â· Screen Visuals
+              Event Digital Partner . Brand Systems . Social Content . Screen Visuals
             </p>
 
             <p className="mt-5 text-sm leading-7 text-white/70">
-              ID8 Technologies supported the summit as a dedicated design and digital partner â€” ensuring seamless, professional, and high-volume visual communication across a fast-paced three-day summit.
+              ID8 Technologies supported the summit as a dedicated design and digital partner  -  ensuring seamless, professional, and high-volume visual communication across a fast-paced three-day summit.
             </p>
 
             <div className="mt-6 space-y-4 border-t border-white/5 pt-6">
@@ -155,7 +155,7 @@ export function ExpoCaseStudy() {
                 &ldquo;ID8 delivered visually stunning graphics and screen layouts under extremely tight summit timelines. A highly reliable digital partner.&rdquo;
               </p>
               <p className="text-[9px] uppercase tracking-wider text-[#10b981] font-bold mt-2 font-mono">
-                â€” summit media team review
+                 -  summit media team review
               </p>
             </div>
           </div>

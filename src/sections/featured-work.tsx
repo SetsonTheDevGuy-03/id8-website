@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { ArrowUpRight, Calendar, Layers, ListChecks } from "lucide-react";
@@ -103,7 +103,7 @@ export function FeaturedWork() {
               {/* Action Button Link */}
               <div className="mt-8 border-t border-white/5 pt-4.5 flex items-center justify-between">
                 <span className="text-[10px] font-bold uppercase tracking-wider text-white/40 group-hover:text-white transition">
-                  {project.tags.slice(0, 2).join(" Â· ")}
+                  {project.tags.slice(0, 2).join(" . ")}
                 </span>
                 <span className="inline-flex items-center gap-1 text-xs font-bold text-[#10b981] group-hover:text-[#10b981] transition">
                   {project.ctaText}

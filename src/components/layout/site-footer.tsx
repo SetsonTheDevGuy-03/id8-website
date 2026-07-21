@@ -16,15 +16,15 @@ export function SiteFooter() {
           {/* Logo & Founding Brief */}
           <div className="flex flex-col gap-5">
             <Link href="/" className="text-xl font-bold tracking-[-0.04em] text-white flex items-center gap-2.5 group">
-              <div className="relative size-5 shrink-0 transition duration-300 group-hover:scale-110">
+              <div className="relative size-6 shrink-0 transition duration-300 group-hover:scale-110">
                 <img
-                  src="/images/id8_cube_hero.png"
-                  alt="ID8 Logo Cube"
-                  className="w-full h-full object-contain"
+                  src="/id8-logo-transparent.svg"
+                  alt="ID8 Technologies Logo"
+                  className="w-full h-full object-contain invert"
                 />
               </div>
               <span>
-                ID8 <span className="text-blue-400 font-medium">Technologies</span>
+                ID8 <span className="text-emerald-400 font-medium">Technologies</span>
               </span>
             </Link>
             <p className="text-sm leading-6 text-white/55">
@@ -133,7 +133,7 @@ export function SiteFooter() {
 
         {/* Bottom Line */}
         <div className="border-t border-white/10 mt-16 pt-8 flex flex-col gap-4 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between">
-          <p>Â© {currentYear} ID8 Technologies. All rights reserved.</p>
+          <p>(c) {currentYear} ID8 Technologies. All rights reserved.</p>
           <p>Built in Namibia. Designed for Africa and beyond.</p>
         </div>
       </Container>

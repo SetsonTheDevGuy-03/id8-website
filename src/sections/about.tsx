@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { Award, Compass, Heart, Shield } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
@@ -42,7 +42,7 @@ export function About() {
             <SectionHeading
               eyebrow="Founder-Led & Dedicated"
               title="Built in Namibia. Designed for Africa's next business generation."
-              description="ID8 Technologies was established on the firm belief that modern African enterprises do not only need generic visual templates â€” they need integrated, high-performance digital systems."
+              description="ID8 Technologies was established on the firm belief that modern African enterprises do not only need generic visual templates  -  they need integrated, high-performance digital systems."
             />
             
             <p className="mt-5 text-sm leading-7 text-white/60">
@@ -56,7 +56,7 @@ export function About() {
             {/* windhoek coordinate badge */}
             <div className="mt-8 inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border border-white/5 bg-white/[0.01] text-[10px] font-mono uppercase tracking-wider text-white/45">
               <span className="size-1.5 rounded-full bg-[#10b981]" />
-              <span>Windhoek Headquarters Â· Latitude -22.5609, Longitude 17.0658</span>
+              <span>Windhoek Headquarters . Latitude -22.5609, Longitude 17.0658</span>
             </div>
           </div>
         </Reveal>

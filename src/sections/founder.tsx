@@ -1,244 +1,214 @@
-﻿"use client";
+"use client";
 
-import { User, Cpu, Code2, Lightbulb, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { MapPin, GraduationCap, Zap, ArrowRight, Linkedin } from "lucide-react";
 import { Section } from "@/components/ui/section";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/motion/reveal";
 
 export function Founder() {
-  const skills = [
-    { name: "Computer Science", category: "Core" },
-    { name: "Software Development", category: "Core" },
-    { name: "Fintech Systems", category: "Specialty" },
-    { name: "AI Automation", category: "Specialty" },
-    { name: "UI/UX Architecture", category: "Design" },
-    { name: "Product Strategy", category: "Business" },
-  ];
-
-  const focusAreas = [
+  const credibilityCards = [
     {
-      icon: Cpu,
-      title: "Intelligent Automation",
-      desc: "Replacing repetitive business operations with resilient, API-driven workflows and AI agents."
+      icon: GraduationCap,
+      label: "Education",
+      value: "BSc Computer Science",
+      sub: "Namibia University of Science & Technology",
     },
     {
-      icon: Code2,
-      title: "Fintech Systems",
-      desc: "Architecting friction-free billing, digital ledgers, and secure integration gateways for retail and services."
+      icon: MapPin,
+      label: "Based",
+      value: "Windhoek, Namibia",
+      sub: "Raised in Swakopmund · Africa-focused",
     },
     {
-      icon: Lightbulb,
-      title: "Tactical UI/UX",
-      desc: "Shaping interactive structures that prioritize high-density layout balance, user intent, and speed."
-    }
+      icon: Zap,
+      label: "Approach",
+      value: "Systems Thinking",
+      sub: "Design · Code · Strategy · AI",
+    },
   ];
 
   return (
     <Section id="founder" className="relative overflow-hidden subtle-grid border-t border-white/5">
-      {/* Decorative colored glow nodes */}
-      <div className="absolute top-1/3 left-1/4 w-[400px] h-[400px] rounded-full bg-emerald-500/5 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] rounded-full bg-blue-500/5 blur-[120px] pointer-events-none animate-pulse" />
+      {/* Background glows */}
+      <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] rounded-full bg-emerald-500/4 blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-blue-500/4 blur-[140px] pointer-events-none" />
 
       <Container>
         <div className="max-w-7xl mx-auto relative z-10">
-          
-          {/* Section title */}
+
+          {/* Section label */}
           <Reveal>
-            <div className="space-y-4 mb-16">
-              <span className="font-mono text-xs uppercase tracking-widest text-[#10b981] flex items-center gap-1.5 font-bold">
-                <User className="w-4 h-4 text-[#10b981]" />
-                Leadership Profile
+            <div className="mb-16 space-y-3">
+              <span className="font-mono text-xs uppercase tracking-widest text-emerald-400 font-bold">
+                About the Founder
               </span>
-              <h2 className="font-display font-semibold text-3xl sm:text-4xl md:text-5xl leading-tight text-white">
-                Founder &amp; CEO
+              <h2 className="font-display font-semibold text-3xl sm:text-4xl md:text-5xl text-white leading-tight">
+                The person behind ID8.
               </h2>
-              <div className="h-[2px] w-12 bg-emerald-500 rounded" />
+              <div className="h-[2px] w-10 bg-emerald-500 rounded" />
             </div>
           </Reveal>
 
+          {/* Main grid */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-            
-            {/* Left Column - Founder Digital Badge & Focus tags (Col 5) */}
-            <div className="lg:col-span-5 space-y-8 lg:sticky lg:top-24">
-              
+
+            {/* Left — Photo + contact */}
+            <div className="lg:col-span-4 space-y-6 lg:sticky lg:top-24">
+
               <Reveal delay={0.1}>
-                {/* Elegant Founder Profile Card */}
-                <div className="glass border border-white/10 p-8 rounded-[28px] relative overflow-hidden shadow-2xl group">
-                  {/* Subtle top decoration */}
-                  <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-emerald-500 to-blue-500" />
-                  <div className="absolute -right-20 -top-20 w-48 h-48 rounded-full bg-emerald-500/5 blur-3xl group-hover:bg-emerald-500/10 transition-colors" />
-                  
-                  <div className="space-y-6 relative z-10">
-                    
-                    {/* Visual Avatar Placeholder & Basic info */}
-                    <div className="flex items-center gap-6">
-                      <div className="relative shrink-0">
-                        <div className="w-20 h-20 rounded-2xl bg-gradient-to-tr from-emerald-500 to-blue-500 p-[1.5px] shadow-[0_0_15px_rgba(16,185,129,0.2)]">
-                          <div className="w-full h-full rounded-[14px] bg-[#0d0d12] flex items-center justify-center">
-                            <span className="font-display font-bold text-2xl tracking-tight text-emerald-400">
-                              SN
-                            </span>
-                          </div>
-                        </div>
-                        {/* Pulsing indicator */}
-                        <span className="absolute -bottom-1 -right-1 flex h-4 w-4">
-                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                          <span className="relative inline-flex rounded-full h-4 w-4 bg-emerald-500 border-2 border-[#050508]"></span>
-                        </span>
-                      </div>
-                      
-                      <div className="space-y-1">
-                        <span className="font-mono text-[9px] uppercase tracking-widest text-emerald-400 font-bold px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20">
-                          Technical Founder &amp; Architect
-                        </span>
-                        <h3 className="font-display font-bold text-xl sm:text-2xl text-white">
-                          Setson Tangi Neumbo
-                        </h3>
-                        <p className="text-xs text-white/60">
-                          Software Developer &amp; Entrepreneur
-                        </p>
-                      </div>
-                    </div>
+                {/* Founder photo */}
+                <div className="relative rounded-[24px] overflow-hidden aspect-[4/5] bg-[#0d0d12] border border-white/8 shadow-2xl">
+                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-emerald-500 to-blue-500" />
 
-                    {/* Specific metrics about Setson */}
-                    <div className="grid grid-cols-2 gap-4 py-4 border-t border-b border-white/10">
-                      <div className="text-left space-y-1">
-                        <span className="font-mono text-[9px] uppercase tracking-widest text-white/50 block font-bold">Base Location</span>
-                        <span className="font-display font-medium text-xs sm:text-sm text-white/80 block">Windhoek, Namibia</span>
-                      </div>
-                      <div className="text-left space-y-1">
-                        <span className="font-mono text-[9px] uppercase tracking-widest text-white/50 block font-bold">Age</span>
-                        <span className="font-display font-medium text-xs sm:text-sm text-white/80 block">25 Years Old</span>
-                      </div>
-                    </div>
+                  <Image
+                    src="/images/founderB.jpg"
+                    alt="Setson Neumbo — Founder & CEO, ID8 Technologies"
+                    fill
+                    className="object-cover object-top"
+                    priority
+                  />
 
-                    {/* Narrative highlight quote box */}
-                    <div className="p-4.5 rounded-2xl bg-white/[0.02] border border-white/5 text-left relative overflow-hidden italic text-xs leading-relaxed text-white/70">
-                      <div className="font-display text-emerald-400 text-3xl absolute -left-1 -top-1 font-serif opacity-30 select-none">&ldquo;</div>
-                      <p className="relative z-10 pl-4">
-                        To help African businesses design, build, automate, and launch the digital systems they need to grow confidently in a modern economy.
-                      </p>
-                    </div>
-
-                    {/* Skill tags list */}
-                    <div className="space-y-3">
-                      <span className="font-mono text-[9px] uppercase tracking-widest text-white/50 font-bold block">
-                        Focus Competencies
-                      </span>
-                      <div className="flex flex-wrap gap-2">
-                        {skills.map((s, idx) => (
-                          <span
-                            key={idx}
-                            className="px-2.5 py-1 rounded bg-white/[0.03] border border-white/10 text-[10px] sm:text-xs text-white/70 transition-colors hover:border-emerald-500/20 hover:text-white"
-                          >
-                            {s.name}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    
+                  {/* Name overlay */}
+                  <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+                    <p className="font-display font-bold text-white text-lg leading-tight">
+                      Setson Tangi Natangwe Neumbo
+                    </p>
+                    <p className="font-mono text-[10px] text-emerald-400 uppercase tracking-widest mt-1">
+                      Founder &amp; CEO, ID8 Technologies
+                    </p>
                   </div>
                 </div>
               </Reveal>
 
-              <Reveal delay={0.2}>
-                {/* Inquire widget */}
-                <div className="glass border border-white/10 p-6 rounded-[24px] space-y-4 text-left">
-                  <span className="font-mono text-[9px] uppercase tracking-widest text-white/50 font-bold block">
-                    Direct Collaboration
-                  </span>
-                  <p className="text-xs text-white/60 leading-relaxed">
-                    Setson reviews early-stage project structures and business automation frameworks directly to design robust execution strategies.
-                  </p>
-                  <a
-                    href="#contact"
-                    className="inline-flex items-center gap-2 font-mono text-xs text-emerald-400 hover:text-blue-400 hover:underline transition-all cursor-pointer"
-                  >
-                    <span>Structure your project brief</span>
-                    <ArrowRight className="w-3 h-3" />
-                  </a>
-                </div>
-              </Reveal>
-
-            </div>
-
-            {/* Right Column - Briefing narrative (Col 7) */}
-            <div className="lg:col-span-7 space-y-10">
-              
               <Reveal delay={0.15}>
-                {/* The professional narrative blocks */}
-                <div className="space-y-6 text-white/70 text-sm sm:text-base leading-relaxed">
-                  
-                  <p className="first-letter:text-4xl first-letter:font-bold first-letter:text-emerald-400 first-letter:mr-3 first-letter:float-left">
-                    Setson Tangi Neumbo is a 25-year-old Namibian software developer, digital systems builder, designer, and entrepreneur with a strong passion for technology, artificial intelligence, financial systems, digital transformation, and African innovation.
-                  </p>
-                  
-                  <p>
-                    As the Founder and CEO of ID8 Technologies, Setson leads the company&apos;s vision, product direction, design strategy, and technical development. His work sits at the intersection of software engineering, product design, AI automation, branding, fintech systems, and business problem-solving.
-                  </p>
-                  
-                  <p>
-                    ID8 Technologies was founded from his belief that modern African businesses do not only need better websites or better designs â€” they need <strong className="text-white">better digital systems</strong>. Many companies still operate with scattered tools, manual workflows, weak online presence, poor customer journeys, and limited access to intelligent digital infrastructure. Setson created ID8 to help close that gap.
-                  </p>
-                  
-                  <p>
-                    With a background in Computer Science and Software Development, Setson combines technical thinking with creative execution. He is able to move between strategy, design, code, business operations, branding, and product development, allowing him to understand both the technical and human side of digital transformation.
-                  </p>
-
-                  <blockquote className="p-5 rounded-2xl bg-emerald-500/[0.03] border-l-4 border-emerald-500 pl-6 text-white/90 text-sm sm:text-[15px] italic leading-relaxed my-8 font-display">
-                    &ldquo;African businesses deserve technical infrastructure that stands on equal footing with the top global benchmark platforms. We don&apos;t build temporary toys; we deploy systems styled for operational confidence.&rdquo;
-                  </blockquote>
-
-                  <p>
-                    His experience includes building websites, digital brand systems, business visuals, event digital assets, startup concepts, software prototypes, and AI-assisted workflows for businesses, events, tourism companies, and emerging ventures. He has also worked across web development, UI/UX design, content systems, digital marketing, business process planning, and product strategy.
-                  </p>
-                  
-                  <p>
-                    Setson&apos;s long-term vision is to build ID8 Technologies into one of Namibia&apos;s leading technology companies â€” a company capable of serving businesses locally while building scalable digital products for Africa and beyond. His focus areas include fintech, AI automation, API-driven platforms, tourism technology, business systems, and software products that solve real market problems.
-                  </p>
-
-                  <p>
-                    Beyond client services, Setson is also building toward <strong className="text-white">ID8 Labs</strong>, the company&apos;s future innovation layer focused on internal products, SaaS tools, fintech prototypes, AI business assistants, event technology, and digital platforms for African businesses.
-                  </p>
-                  
-                  <p>
-                    As a young founder, Setson brings energy, adaptability, creativity, and a builder&apos;s mindset to every project. His leadership style is hands-on: he is involved in understanding the real operational problem, shaping the strategy, designing the core experience, guiding the technology, and ensuring that the final product feels practical, professional, and future-ready.
-                  </p>
-
-                </div>
-              </Reveal>
-
-              <Reveal delay={0.2}>
-                {/* Tactical focus milestones row */}
-                <div className="space-y-6 pt-8 border-t border-white/10">
-                  <span className="font-mono text-[10px] uppercase tracking-widest text-[#10b981] font-bold block">
-                    Setson&apos;s Core Engineering Targets
+                {/* Contact / social */}
+                <div className="glass border border-white/10 p-5 rounded-[20px] space-y-4">
+                  <span className="font-mono text-[9px] uppercase tracking-widest text-white/40 font-bold block">
+                    Connect
                   </span>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {focusAreas.map((area, idx) => {
-                      const AreaIcon = area.icon;
-                      return (
-                        <div 
-                          key={idx} 
-                          className="glass border border-white/5 p-5 rounded-2xl hover:border-emerald-500/20 transition-all space-y-3"
-                        >
-                          <div className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
-                            <AreaIcon className="w-4 h-4" />
-                          </div>
-                          <h4 className="font-display font-semibold text-sm text-white">{area.title}</h4>
-                          <p className="text-xs text-white/60 leading-relaxed text-left">
-                            {area.desc}
-                          </p>
-                        </div>
-                      );
-                    })}
+                  <div className="space-y-3">
+                    <a
+                      href="mailto:founder@id8tech.com"
+                      className="flex items-center gap-3 text-xs text-white/60 hover:text-emerald-400 transition-colors group"
+                    >
+                      <span className="w-6 h-6 rounded bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-emerald-500/30 transition-colors text-white/40">
+                        @
+                      </span>
+                      founder@id8tech.com
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/setson-neumbo-3a0306245/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 text-xs text-white/60 hover:text-emerald-400 transition-colors group"
+                    >
+                      <span className="w-6 h-6 rounded bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-emerald-500/30 transition-colors">
+                        <Linkedin className="w-3 h-3 text-white/40 group-hover:text-emerald-400 transition-colors" />
+                      </span>
+                      LinkedIn Profile
+                      <ArrowRight className="w-3 h-3 ml-auto opacity-40 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
+                    </a>
                   </div>
                 </div>
               </Reveal>
 
+              <Reveal delay={0.2}>
+                <a
+                  href="#contact"
+                  className="block w-full text-center py-3.5 px-5 rounded-[16px] bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono uppercase tracking-widest hover:bg-emerald-500/15 hover:border-emerald-500/40 transition-all"
+                >
+                  Work with Setson
+                </a>
+              </Reveal>
+
             </div>
 
+            {/* Right — Bio */}
+            <div className="lg:col-span-8 space-y-10">
+
+              <Reveal delay={0.15}>
+                <div className="space-y-5 text-white/70 text-[15px] leading-[1.8]">
+
+                  <p>
+                    <strong className="text-white font-semibold">Setson Tangi Natangwe Neumbo</strong> is a Namibian
+                    founder, product designer, and systems thinker. A Computer Science graduate from NUST, raised in
+                    Swakopmund and now based in Windhoek, his background combines software development, visual design,
+                    strategic communication, entrepreneurship, and a deep interest in how technology can make African
+                    organisations more capable.
+                  </p>
+
+                  <p>
+                    His journey started long before ID8 was formally registered — through early product ideas,
+                    freelance design work, teaching programming and robotics, building websites, experimenting with
+                    fintech concepts, and helping organisations communicate their work more professionally. What emerged
+                    from that experience is an approach that does not think in websites, apps, or graphics alone.{" "}
+                    <strong className="text-white">It thinks in systems.</strong>
+                  </p>
+
+                  <p>
+                    Every project at ID8 begins with one question:{" "}
+                    <em className="text-white/90 not-italic font-medium">
+                      how can this make the person, business, or organisation more capable?
+                    </em>
+                  </p>
+
+                  <p>
+                    That philosophy shaped ID8 into more than a design or software studio. The company sits at the
+                    intersection of design, business systems, AI-assisted productivity, fintech thinking, and strategic
+                    communication — building digital infrastructure that helps Namibian and African organisations
+                    operate with more clarity, professionalism, and intelligence.
+                  </p>
+
+                  <p>
+                    From websites and event campaigns to publication design, product prototypes, and internal workflow
+                    systems, the goal is always the same: create visible proof, document the process, improve the
+                    system, and turn every project into a stronger foundation for the next one.
+                  </p>
+
+                </div>
+              </Reveal>
+
+              {/* Pull quote */}
+              <Reveal delay={0.2}>
+                <blockquote className="relative pl-6 border-l-[3px] border-emerald-500">
+                  <p className="font-display text-lg sm:text-xl text-white/90 italic leading-relaxed">
+                    &ldquo;I started ID8 because I believe technology should make people and organisations more
+                    capable.&rdquo;
+                  </p>
+                  <footer className="mt-3 font-mono text-[10px] uppercase tracking-widest text-white/40">
+                    — Setson Neumbo, Founder
+                  </footer>
+                </blockquote>
+              </Reveal>
+
+              {/* 3 credibility cards */}
+              <Reveal delay={0.25}>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+                  {credibilityCards.map((card, idx) => {
+                    const CardIcon = card.icon;
+                    return (
+                      <div
+                        key={idx}
+                        className="glass border border-white/8 p-5 rounded-[20px] space-y-3 hover:border-emerald-500/20 transition-all"
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
+                          <CardIcon className="w-4 h-4 text-emerald-400" />
+                        </div>
+                        <div className="space-y-0.5">
+                          <p className="font-mono text-[9px] uppercase tracking-widest text-white/40 font-bold">
+                            {card.label}
+                          </p>
+                          <p className="font-display font-semibold text-sm text-white">{card.value}</p>
+                          <p className="text-[11px] text-white/50 leading-snug">{card.sub}</p>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </Reveal>
+
+            </div>
           </div>
 
         </div>

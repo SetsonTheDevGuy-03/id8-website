@@ -54,7 +54,7 @@ export function LabsTeaser() {
             <SectionHeading
               eyebrow="R&D Ecosystem"
               title="Client services today. Product innovation tomorrow."
-              description="ID8 does not only build for others. We run an active research and development laboratory â€” testing, designing, and compiling internal software platforms for tourism, fintech, and automated workflow operations."
+              description="ID8 does not only build for others. We run an active research and development laboratory — testing, designing, and compiling internal software platforms for tourism, fintech, and automated workflow operations."
             />
             
             <p className="mt-5 text-sm leading-7 text-white/55">

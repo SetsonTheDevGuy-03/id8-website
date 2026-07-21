@@ -28,17 +28,17 @@ export function Contact() {
 
   const budgetOptions = [
     "Under N$3,500",
-    "N$3,500 â€“ N$7,500",
-    "N$7,500 â€“ N$15,000",
-    "N$15,000 â€“ N$35,000",
+    "N$3,500 - N$7,500",
+    "N$7,500 - N$15,000",
+    "N$15,000 - N$35,000",
     "N$35,000+",
     "Not sure yet"
   ];
 
   const timelineOptions = [
     "Urgent (less than 2 weeks)",
-    "2 â€“ 4 weeks",
-    "1 â€“ 2 months",
+    "2 - 4 weeks",
+    "1 - 2 months",
     "2+ months / Long-term",
     "Flexible"
   ];

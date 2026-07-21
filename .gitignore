@@ -31,3 +31,4 @@ next-env.d.ts
 
 # Exported files
 id8-technologies.comv1/
+.vercel

@@ -39,16 +39,16 @@ export function SiteHeader() {
           href="/"
           className="text-lg font-bold tracking-[-0.04em] text-white flex items-center gap-2.5 group"
         >
-          <div className="relative size-6 shrink-0 transition duration-300 group-hover:scale-110">
+          <div className="relative size-7 shrink-0 transition duration-300 group-hover:scale-110">
             <Image
-              src="/images/id8_cube_hero.png"
-              alt="ID8 Logo Cube"
+              src="/id8-logo-transparent.svg"
+              alt="ID8 Technologies Logo"
               fill
-              className="object-contain"
+              className="object-contain invert"
             />
           </div>
           <span>
-            ID8 <span className="text-blue-400 font-medium">Technologies</span>
+            ID8 <span className="text-emerald-400 font-medium">Technologies</span>
           </span>
         </Link>
 

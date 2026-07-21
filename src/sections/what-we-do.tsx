@@ -32,7 +32,7 @@ export function WhatWeDo() {
             />
             
             <p className="mt-4 text-sm leading-7 text-white/55">
-              ID8 Technologies acts as your long-term product engineering partner â€” helping you build exactly what your business needs today, while structuring the codebase and data systems so you can scale tomorrow without costly rebuilds.
+              ID8 Technologies acts as your long-term product engineering partner — helping you build exactly what your business needs today, while structuring the codebase and data systems so you can scale tomorrow without costly rebuilds.
             </p>
 
             {/* Micro strategic credentials block */}

@@ -9,7 +9,7 @@ const pipelineStages = [
   {
     stage: "Stage 01: Hypothesis",
     title: "Problem Identification & Architecture Mockup",
-    desc: "We analyze bottlenecks in high-frequency business systems—ranging from automated invoicing to multi-party splits in Tourism operations. We define API schemas and sketch high-fidelity UI flows.",
+    desc: "We analyze bottlenecks in high-frequency business systems - ranging from automated invoicing to multi-party splits in Tourism operations. We define API schemas and sketch high-fidelity UI flows.",
     icon: Code2,
     color: "text-blue-400 border-blue-500/20 bg-blue-500/5",
   },
