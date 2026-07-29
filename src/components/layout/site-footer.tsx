@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, Github, Linkedin, MessageSquare, Twitter } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, Twitter } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { navigation } from "@/data/navigation";
 
@@ -59,15 +59,6 @@ export function SiteFooter() {
               >
                 <Twitter className="size-4" />
               </a>
-              <a
-                href="https://wa.me/264812345678"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="size-9 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-blue-400 hover:border-blue-500/30 bg-white/3 transition duration-200"
-                aria-label="WhatsApp Contact"
-              >
-                <MessageSquare className="size-4" />
-              </a>
             </div>
           </div>
 
@@ -97,11 +88,11 @@ export function SiteFooter() {
           <div className="flex flex-col gap-4">
             <h4 className="text-sm font-semibold uppercase tracking-wider text-white">Capabilities</h4>
             <div className="flex flex-col gap-2.5 text-sm text-white/60">
-              <span className="hover:text-white transition">Websites & Digital Presence</span>
               <span className="hover:text-white transition">Software & Business Systems</span>
+              <span className="hover:text-white transition">Websites & Digital Presence</span>
               <span className="hover:text-white transition">AI Automation & Workflows</span>
               <span className="hover:text-white transition">Product Design & MVP Sprints</span>
-              <span className="hover:text-white transition">FinTech & API Solutions</span>
+              <span className="hover:text-white transition">Brand Identity & Design</span>
             </div>
           </div>
 
@@ -119,12 +110,6 @@ export function SiteFooter() {
                   className="hover:text-[#10b981] transition duration-150 font-medium"
                 >
                   hello@id8technologies.com
-                </a>
-                <a
-                  href="https://wa.me/264812345678"
-                  className="hover:text-[#10b981] transition duration-150 font-medium"
-                >
-                  +264 81 234 5678 (WhatsApp)
                 </a>
               </div>
             </div>
