@@ -10,30 +10,6 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    id: "digital-presence",
-    title: "Websites & Digital Presence",
-    category: "Presence & Growth",
-    summary: "Professional, SEO-optimized, highly responsive web interfaces that turn attention into qualified business opportunities.",
-    subServices: [
-      "Custom Business & Corporate Portals",
-      "Interactive One-Page Landing Funnels",
-      "Tourism & Hospitality Booking Engines",
-      "NGO & Institutional Information Platforms",
-      "Professional Persona Portfolios"
-    ],
-    bullets: [
-      "Complete client onboarding & inquiry pipelines built internally",
-      "High-speed loading with optimized asset delivery & clean layouts",
-      "Integrated WhatsApp & call-to-action routing widgets",
-      "Semantic SEO configurations for local Namibian and global search space"
-    ],
-    outcomes: [
-      "Generate continuous stream of qualified customer enquiries",
-      "Establish immediate institutional trust with investors & partners",
-      "Differentiate strongly from competitors with custom branding"
-    ]
-  },
-  {
     id: "software-systems",
     title: "Software & Business Systems",
     category: "Engineering & Logic",
@@ -54,6 +30,30 @@ export const services: Service[] = [
       "Eliminate manual administrative lookup hours completely",
       "Centralize workflow visibility for regional coordinate offices",
       "Scale from casual freelance tasks into serious corporate systems"
+    ]
+  },
+  {
+    id: "digital-presence",
+    title: "Websites & Digital Presence",
+    category: "Presence & Growth",
+    summary: "Professional, SEO-optimized, highly responsive web interfaces that turn attention into qualified business opportunities.",
+    subServices: [
+      "Custom Business & Corporate Portals",
+      "Interactive One-Page Landing Funnels",
+      "Tourism & Hospitality Booking Engines",
+      "NGO & Institutional Information Platforms",
+      "Professional Persona Portfolios"
+    ],
+    bullets: [
+      "Complete client onboarding & inquiry pipelines built internally",
+      "High-speed loading with optimized asset delivery & clean layouts",
+      "Call-to-action routing widgets and conversion-optimized layouts",
+      "Semantic SEO configurations for local Namibian and global search space"
+    ],
+    outcomes: [
+      "Generate continuous stream of qualified customer enquiries",
+      "Establish immediate institutional trust with investors & partners",
+      "Differentiate strongly from competitors with custom branding"
     ]
   },
   {
