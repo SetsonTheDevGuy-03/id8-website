@@ -131,11 +131,15 @@ export function Hero() {
               <div className="relative">
 
                 {/* Main founder photo */}
-                <div className="relative rounded-[28px] overflow-hidden aspect-[4/5] max-w-sm mx-auto lg:max-w-none border border-white/8 shadow-[0_0_80px_rgba(16,185,129,0.12)]">
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#020204] via-transparent to-transparent z-10" />
+                <div className="relative rounded-[28px] overflow-hidden aspect-[4/5] max-w-sm mx-auto lg:max-w-none border border-emerald-500/20 shadow-[0_0_80px_rgba(16,185,129,0.15)]">
+                  {/* Dark overlay to blend white studio background */}
+                  <div className="absolute inset-0 bg-[#020204]/40 z-10 mix-blend-multiply" />
+                  {/* Bottom gradient for text readability */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#020204] via-[#020204]/20 to-[#020204]/10 z-[11]" />
+                  {/* Emerald top accent */}
                   <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-emerald-500 to-blue-500 z-20" />
                   <Image
-                    src="/images/founderB.jpg"
+                    src="/images/founderA.jpg"
                     alt="Setson Neumbo — Founder & CEO, ID8 Technologies"
                     fill
                     priority

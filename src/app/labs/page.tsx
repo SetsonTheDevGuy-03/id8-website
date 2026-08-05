@@ -39,7 +39,7 @@ export default function LabsPage() {
         <div className="mesh-circle c2 top-[60%] left-[-150px] opacity-10" />
 
         {/* Premium Labs Header */}
-        <section className="relative pt-20 pb-12 overflow-hidden">
+        <section className="relative pt-8 pb-12 overflow-hidden">
           <div className="max-w-7xl mx-auto px-6 md:px-12 text-center relative z-10">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#8b5cf6]/30 bg-[#8b5cf6]/5 text-[#8b5cf6] text-xs font-mono mb-6 animate-pulse">
               <Sparkles className="size-3.5" />
