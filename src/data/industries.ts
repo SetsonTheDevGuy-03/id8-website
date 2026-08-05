@@ -4,6 +4,7 @@ import {
   Compass,
   CreditCard,
   Globe,
+  HardHat,
   Landmark,
   Rocket,
   Store,
@@ -12,22 +13,22 @@ import type { Industry } from "@/types/content";
 
 export const industries: Industry[] = [
   {
-    title: "Small Businesses",
+    title: "Mining, Industrial & Utilities",
     description:
-      "Modern websites, brand identity assets, and digital marketing setups to establish professional credibility, outshine local competitors, and capture inbound client leads.",
-    icon: Store,
+      "Enterprise procurement systems, operational command dashboards, field data digitization, and compliance-grade document management platforms built for plant-scale environments.",
+    icon: HardHat,
   },
   {
-    title: "Tourism & Hospitality",
+    title: "Corporate Teams",
     description:
-      "Visual tour portals, smooth travel itinerary builders, package calendars, and conversion-optimized booking flows tailored to premium international and regional visitors.",
-    icon: Compass,
+      "Optimized internal applications, security-focused operational dashboards, custom scheduling boards, task-automation hooks, and reliable B2B digital assets.",
+    icon: Building2,
   },
   {
-    title: "Events & Conferences",
+    title: "Government & Public Sector",
     description:
-      "Fully integrated event packages: branding design, live screen presentations, presenter and speaker holding assets, sponsor placement systems, and post-summit recap content.",
-    icon: CalendarDays,
+      "Airtight informational portals, public notices libraries, secure communication hubs, data dashboards, and digitized public service design roadmaps.",
+    icon: Landmark,
   },
   {
     title: "Startups & Founders",
@@ -48,15 +49,21 @@ export const industries: Industry[] = [
     icon: CreditCard,
   },
   {
-    title: "Corporate Teams",
+    title: "Tourism & Hospitality",
     description:
-      "Optimized internal applications, security-focused operational dashboards, custom scheduling boards, task-automation hooks, and reliable B2B digital assets.",
-    icon: Building2,
+      "Visual tour portals, smooth travel itinerary builders, package calendars, and conversion-optimized booking flows tailored to premium international and regional visitors.",
+    icon: Compass,
   },
   {
-    title: "Government & Public Sector",
+    title: "Small Businesses",
     description:
-      "Airtight informational portals, public notices libraries, secure communication hubs, data dashboards, and digitized public service design roadmaps.",
-    icon: Landmark,
+      "Modern websites, brand identity assets, and digital marketing setups to establish professional credibility, outshine local competitors, and capture inbound client leads.",
+    icon: Store,
+  },
+  {
+    title: "Events & Conferences",
+    description:
+      "Fully integrated event packages: branding design, live screen presentations, presenter and speaker holding assets, sponsor placement systems, and post-summit recap content.",
+    icon: CalendarDays,
   },
 ];
