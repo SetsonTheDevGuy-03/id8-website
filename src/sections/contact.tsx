@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, CheckCircle2, MessageSquare, Send, Sparkles } from "lucide-react";
+import { ArrowRight, CheckCircle2, Send, Sparkles } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { Section } from "@/components/ui/section";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -17,7 +17,6 @@ export function Contact() {
     name: "",
     company: "",
     email: "",
-    whatsapp: "",
     budgetRange: "",
     timeline: "",
     message: "",
@@ -77,21 +76,6 @@ export function Contact() {
 
             {/* Direct Channels Cards */}
             <div className="mt-10 flex flex-col gap-4 w-full">
-              <a
-                href="https://wa.me/264812345678"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 rounded-2xl border border-white/5 bg-white/[0.01] p-4.5 hover:border-emerald-500/25 hover:bg-emerald-500/5 transition duration-300"
-              >
-                <div className="rounded-xl bg-emerald-500/10 p-3 text-emerald-400">
-                  <MessageSquare className="size-5" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-bold text-white tracking-wide">Direct WhatsApp</h4>
-                  <p className="text-xs text-white/50 mt-0.5">Quick strategy chat: +264 81 234 5678</p>
-                </div>
-              </a>
-
               <a
                 href="mailto:hello@id8technologies.com"
                 className="flex items-center gap-4 rounded-2xl border border-white/5 bg-white/[0.01] p-4.5 hover:border-blue-500/25 hover:bg-blue-500/5 transition duration-300"
@@ -205,35 +189,19 @@ export function Contact() {
                   </div>
                 </div>
 
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <div>
-                    <label htmlFor="email" className="block text-[10px] font-bold uppercase tracking-wider text-white/45 mb-1.5 font-mono">
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      required
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="briefs@company.com"
-                      className="w-full rounded-xl border border-white/10 bg-[#050508]/60 px-4 py-3 text-xs text-white placeholder-white/20 focus:border-emerald-500/50 focus:outline-none transition"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="whatsapp" className="block text-[10px] font-bold uppercase tracking-wider text-white/45 mb-1.5 font-mono">
-                      WhatsApp Number
-                    </label>
-                    <input
-                      type="text"
-                      id="whatsapp"
-                      required
-                      value={formData.whatsapp}
-                      onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
-                      placeholder="e.g. +264 81..."
-                      className="w-full rounded-xl border border-white/10 bg-[#050508]/60 px-4 py-3 text-xs text-white placeholder-white/20 focus:border-emerald-500/50 focus:outline-none transition"
-                    />
-                  </div>
+                <div>
+                  <label htmlFor="email" className="block text-[10px] font-bold uppercase tracking-wider text-white/45 mb-1.5 font-mono">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    required
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    placeholder="briefs@company.com"
+                    className="w-full rounded-xl border border-white/10 bg-[#050508]/60 px-4 py-3 text-xs text-white placeholder-white/20 focus:border-emerald-500/50 focus:outline-none transition"
+                  />
                 </div>
 
                 <div className="grid gap-4 sm:grid-cols-2">
