@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, Github, Linkedin, Twitter } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, Twitter, MessageCircle } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { navigation } from "@/data/navigation";
 
@@ -59,6 +59,15 @@ export function SiteFooter() {
               >
                 <Twitter className="size-4" />
               </a>
+              <a
+                href="https://wa.me/264818073643"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="size-9 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-[#25D366] hover:border-[#25D366]/30 bg-white/3 transition duration-200"
+                aria-label="WhatsApp Business"
+              >
+                <MessageCircle className="size-4" />
+              </a>
             </div>
           </div>
 
@@ -110,6 +119,15 @@ export function SiteFooter() {
                   className="hover:text-[#10b981] transition duration-150 font-medium"
                 >
                   hello@id8technologies.com
+                </a>
+                <a
+                  href="https://wa.me/264818073643"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#10b981] transition duration-150 font-medium flex items-center gap-1.5"
+                >
+                  <MessageCircle className="size-3.5" />
+                  +264 81 807 3643 (WhatsApp)
                 </a>
               </div>
             </div>

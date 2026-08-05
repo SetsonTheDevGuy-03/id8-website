@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, CheckCircle2, Send, Sparkles } from "lucide-react";
+import { ArrowRight, CheckCircle2, Send, Sparkles, MessageCircle } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { Section } from "@/components/ui/section";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -80,7 +80,7 @@ export function Contact() {
       <div className="absolute bottom-0 right-0 -z-10 size-[25rem] rounded-full bg-emerald-500/5 blur-[120px] pointer-events-none" />
 
       <div className="grid gap-16 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 items-start">
-        {/* Left Column:æˆ˜ç•¥ CTA */}
+        {/* Left Column: CTA */}
         <Reveal>
           <div className="flex flex-col items-start text-left">
             <SectionHeading
@@ -104,7 +104,21 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-white tracking-wide">Direct Email</h4>
-                  <p className="text-xs text-white/50 mt-0.5">General briefs: hello@id8technologies.com</p>
+                  <p className="text-xs text-white/50 mt-0.5">hello@id8technologies.com</p>
+                </div>
+              </a>
+              <a
+                href="https://wa.me/264818073643"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 rounded-2xl border border-white/5 bg-white/[0.01] p-4.5 hover:border-[#25D366]/25 hover:bg-[#25D366]/5 transition duration-300"
+              >
+                <div className="rounded-xl bg-[#25D366]/10 p-3 text-[#25D366]">
+                  <MessageCircle className="size-5" />
+                </div>
+                <div>
+                  <h4 className="text-sm font-bold text-white tracking-wide">WhatsApp Business</h4>
+                  <p className="text-xs text-white/50 mt-0.5">+264 81 807 3643 · Quick briefs & questions</p>
                 </div>
               </a>
             </div>
