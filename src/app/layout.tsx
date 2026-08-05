@@ -5,7 +5,7 @@ import { ThemeProvider } from "@/context/ThemeContext";
 
 export const metadata: Metadata = {
   title: {
-    default: "ID8 Technologies | Digital Systems Studio  -  Namibia",
+    default: "ID8 Technologies | Digital Systems Studio — Namibia",
     template: "%s | ID8 Technologies",
   },
   description:

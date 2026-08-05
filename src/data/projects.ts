@@ -85,7 +85,7 @@ export const projects: Project[] = [
       "Digital capability profiles",
     ],
     tags: ["Websites & Presence", "Corporate Web", "Security", "Lead Capture"],
-    imageUrl: "/images/founder.jpg",
+    imageUrl: "/images/id8_cube_hero.png",
     ctaText: "Request Capability Deck",
     timeline: "2 Weeks Per Build",
     stack: ["Next.js", "Tailwind CSS", "Resend API", "Vercel"],

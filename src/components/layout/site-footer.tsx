@@ -118,7 +118,7 @@ export function SiteFooter() {
 
         {/* Bottom Line */}
         <div className="border-t border-white/10 mt-16 pt-8 flex flex-col gap-4 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between">
-          <p>(c) {currentYear} ID8 Technologies. All rights reserved.</p>
+          <p>&copy; {currentYear} ID8 Technologies. All rights reserved.</p>
           <p>Built in Namibia. Designed for Africa and beyond.</p>
         </div>
       </Container>
