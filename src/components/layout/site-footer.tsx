@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, Github, Linkedin, MessageSquare, Twitter } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, Twitter } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { navigation } from "@/data/navigation";
 
@@ -59,15 +59,6 @@ export function SiteFooter() {
               >
                 <Twitter className="size-4" />
               </a>
-              <a
-                href="https://wa.me/264812345678"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="size-9 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-blue-400 hover:border-blue-500/30 bg-white/3 transition duration-200"
-                aria-label="WhatsApp Contact"
-              >
-                <MessageSquare className="size-4" />
-              </a>
             </div>
           </div>
 
@@ -120,12 +111,6 @@ export function SiteFooter() {
                 >
                   hello@id8technologies.com
                 </a>
-                <a
-                  href="https://wa.me/264812345678"
-                  className="hover:text-[#10b981] transition duration-150 font-medium"
-                >
-                  +264 81 234 5678 (WhatsApp)
-                </a>
               </div>
             </div>
           </div>
@@ -133,7 +118,7 @@ export function SiteFooter() {
 
         {/* Bottom Line */}
         <div className="border-t border-white/10 mt-16 pt-8 flex flex-col gap-4 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between">
-          <p>(c) {currentYear} ID8 Technologies. All rights reserved.</p>
+          <p>&copy; {currentYear} ID8 Technologies. All rights reserved.</p>
           <p>Built in Namibia. Designed for Africa and beyond.</p>
         </div>
       </Container>

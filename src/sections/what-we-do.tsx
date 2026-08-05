@@ -42,8 +42,8 @@ export function WhatWeDo() {
                 <p className="text-[10px] uppercase tracking-wider text-white/45 mt-1 font-semibold">Custom Codebase</p>
               </GlassCard>
               <GlassCard className="p-4 border-white/5 hover:border-[#3b82f6]/20 bg-white/2">
-                <p className="text-xl font-bold text-white tracking-tight">No-Fake</p>
-                <p className="text-[10px] uppercase tracking-wider text-white/45 mt-1 font-semibold"> Namibian Proof</p>
+                <p className="text-xl font-bold text-white tracking-tight">Africa-First</p>
+                <p className="text-[10px] uppercase tracking-wider text-white/45 mt-1 font-semibold">Namibian Studio</p>
               </GlassCard>
             </div>
           </div>

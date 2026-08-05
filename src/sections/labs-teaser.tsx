@@ -23,7 +23,7 @@ const labProducts = [
   {
     name: "AI Ops Assistant",
     category: "Automation",
-    desc: "Fine-tuning business assistant layers connecting internal directories to WhatsApp interfaces.",
+    desc: "Fine-tuning business assistant layers connecting internal directories to intelligent chat interfaces.",
     icon: Bot,
   },
   {
@@ -58,7 +58,7 @@ export function LabsTeaser() {
             />
             
             <p className="mt-5 text-sm leading-7 text-white/55">
-              By testing internal products under **ID8 Labs**, we solve our own business challenges first before taking those frameworks, code blocks, and lessons directly to our client platforms. This ensures every MVP or system we build for you is field-tested, robust, and mature.
+              By testing internal products under <strong>ID8 Labs</strong>, we solve our own business challenges first before taking those frameworks, code blocks, and lessons directly to our client platforms. This ensures every MVP or system we build for you is field-tested, robust, and mature.
             </p>
 
             {/* Labs teaser CTA */}
