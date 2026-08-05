@@ -115,10 +115,10 @@ export function SiteFooter() {
               </p>
               <div className="flex flex-col gap-1.5 mt-2">
                 <a
-                  href="mailto:hello@id8technologies.com"
+                  href="mailto:hello@id8tech.com"
                   className="hover:text-[#10b981] transition duration-150 font-medium"
                 >
-                  hello@id8technologies.com
+                  hello@id8tech.com
                 </a>
                 <a
                   href="https://wa.me/264818073643"

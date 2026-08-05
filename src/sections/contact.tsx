@@ -96,7 +96,7 @@ export function Contact() {
             {/* Direct Channels Cards */}
             <div className="mt-10 flex flex-col gap-4 w-full">
               <a
-                href="mailto:hello@id8technologies.com"
+                href="mailto:hello@id8tech.com"
                 className="flex items-center gap-4 rounded-2xl border border-white/5 bg-white/[0.01] p-4.5 hover:border-blue-500/25 hover:bg-blue-500/5 transition duration-300"
               >
                 <div className="rounded-xl bg-blue-500/10 p-3 text-blue-400">
@@ -104,7 +104,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-white tracking-wide">Direct Email</h4>
-                  <p className="text-xs text-white/50 mt-0.5">hello@id8technologies.com</p>
+                  <p className="text-xs text-white/50 mt-0.5">hello@id8tech.com</p>
                 </div>
               </a>
               <a

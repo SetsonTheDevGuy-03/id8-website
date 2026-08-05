@@ -18,7 +18,7 @@ export function ContactCta() {
             Tell us what you are building, what you need, and when you need it.
             We will help turn the idea into a clear next step.
           </p>
-          <ButtonLink href="mailto:hello@id8technologies.com" className="mt-8">
+          <ButtonLink href="mailto:hello@id8tech.com" className="mt-8">
             Start the Conversation
             <ArrowRight aria-hidden="true" className="size-4" />
           </ButtonLink>
