@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, CheckCircle2, Shield, Zap, Globe } from "lucide-react";
+import { ArrowRight, CheckCircle2, Cpu, Zap, Layers } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import Link from "next/link";
 import Image from "next/image";
@@ -20,20 +20,20 @@ const proofPoints = [
 
 const capabilities = [
   {
-    icon: Globe,
-    label: "Websites & Digital Presence",
+    icon: Cpu,
+    label: "Systems & Software",
     color: "text-emerald-400",
     bg: "bg-emerald-500/10 border-emerald-500/20",
   },
   {
-    icon: Shield,
-    label: "Software & Business Systems",
+    icon: Zap,
+    label: "AI Automation",
     color: "text-blue-400",
     bg: "bg-blue-500/10 border-blue-500/20",
   },
   {
-    icon: Zap,
-    label: "AI Automation & Workflows",
+    icon: Layers,
+    label: "Design, Brand & Media",
     color: "text-purple-400",
     bg: "bg-purple-500/10 border-purple-500/20",
   },
@@ -62,20 +62,18 @@ export function Hero() {
 
             <Reveal delay={0.05}>
               <h1 className="font-display font-bold text-4xl sm:text-5xl xl:text-6xl tracking-tight text-white leading-[1.1]">
-                Digital systems
+                We build the systems
                 <br />
-                engineered for{" "}
+                businesses{" "}
                 <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-blue-400 bg-clip-text text-transparent">
-                  African business
+                  run on.
                 </span>
-                <br />
-                that means it.
               </h1>
             </Reveal>
 
             <Reveal delay={0.1}>
               <p className="text-base sm:text-lg text-white/60 leading-relaxed max-w-lg">
-                ID8 Technologies designs and builds websites, software platforms, AI automations, and brand systems for organisations that need to operate with precision, speed, and confidence.
+                Software, dashboards and AI automation for Namibian companies — plus the brand, content and media around them. One team, from the problem to the launch.
               </p>
             </Reveal>
 

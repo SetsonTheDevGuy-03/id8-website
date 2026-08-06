@@ -4,27 +4,34 @@ import { CartProvider } from "@/context/CartContext";
 import { ThemeProvider } from "@/context/ThemeContext";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://id8tech.com"),
   title: {
     default: "ID8 Technologies | Digital Systems Studio — Namibia",
     template: "%s | ID8 Technologies",
   },
   description:
-    "ID8 Technologies is a Namibia-born digital systems and product engineering studio. We design, build, automate, and launch websites, software platforms, AI workflows, and product experiences.",
+    "ID8 Technologies builds the systems Namibian businesses run on — software, dashboards, AI automation and VR training — plus the brand, content and media around them.",
   keywords: [
-    "digital systems studio",
-    "Namibia software company",
+    "business systems Namibia",
+    "software development Windhoek",
     "AI automation Namibia",
-    "web development Windhoek",
-    "product engineering Africa",
-    "fintech design Africa",
+    "VR training Namibia",
+    "digital systems studio",
+    "One Percent Media",
     "ID8 Technologies",
   ],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "ID8 Technologies | Digital Systems Studio",
     description:
-      "A Namibia-born digital systems and product engineering studio building high-stakes software, AI automations, and modern web platforms.",
+      "ID8 Technologies builds the systems Namibian businesses run on — software, dashboards, AI automation and VR training — plus the brand, content and media around them.",
     type: "website",
-    locale: "en_ZA",
+    locale: "en_NA",
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 
@@ -34,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en-NA">
       <body className="font-sans antialiased selection:bg-blue-500/30" suppressHydrationWarning>
         <ThemeProvider>
           <CartProvider>
@@ -45,5 +52,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-
