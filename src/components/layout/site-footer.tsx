@@ -18,9 +18,9 @@ export function SiteFooter() {
             <Link href="/" className="text-xl font-bold tracking-[-0.04em] text-white flex items-center gap-2.5 group">
               <div className="relative size-6 shrink-0 transition duration-300 group-hover:scale-110">
                 <img
-                  src="/id8-logo-transparent.svg"
+                  src="/id8-cube-icon.svg"
                   alt="ID8 Technologies Logo"
-                  className="w-full h-full object-contain invert"
+                  className="w-full h-full object-contain"
                 />
               </div>
               <span>
