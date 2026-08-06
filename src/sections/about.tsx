@@ -9,22 +9,22 @@ import { GlassCard } from "@/components/ui/glass-card";
 const coreValues = [
   {
     title: "Systems, Not Templates",
-    description: "We avoid generic, bloated visual themes. We engineer lightweight, fast, secure React systems custom-tailored to solve business bottlenecks.",
+    description: "We build lightweight, secure custom systems that solve real business problems — not off-the-shelf themes that you'll outgrow.",
     icon: Compass,
   },
   {
-    title: "Full Intellectual Property",
-    description: "We guarantee complete ownership, code transfers, domain handovers, and strict data privacy protections upon project signoff.",
+    title: "Full IP Ownership",
+    description: "Complete code transfer, domain handovers, and strict data privacy protections upon project signoff. You own everything.",
     icon: Shield,
   },
   {
-    title: "100% Local Outcomes",
-    description: "Namibia-born studio building software tailored to the structural constraints and opportunities of regional African markets.",
+    title: "One Percent Media",
+    description: "ID8's media arm. In-house brand, photography, video and campaign production — so the same team builds your system and tells its story.",
     icon: Award,
   },
   {
-    title: "Human Partnership First",
-    description: "No robotic tickets or fake scale. You collaborate directly with senior product engineers committed to your systems success.",
+    title: "Direct Collaboration",
+    description: "No tickets, no account managers. You work directly with the person building your product, start to finish.",
     icon: Heart,
   },
 ];
@@ -40,17 +40,17 @@ export function About() {
         <Reveal>
           <div className="flex flex-col items-start text-left">
             <SectionHeading
-              eyebrow="Founder-Led & Dedicated"
-              title="Built in Namibia. Designed for Africa's next business generation."
-              description="ID8 Technologies was established on the firm belief that modern African enterprises do not only need generic visual templates  -  they need integrated, high-performance digital systems."
+              eyebrow="Founder-Led · Windhoek, Namibia"
+              title="We build the systems businesses run on."
+              description="ID8 Technologies is a founder-led Namibian studio. We build the operational systems companies actually run on — dashboards, internal tools, client portals, automation — and design the products around them."
             />
-            
+
             <p className="mt-5 text-sm leading-7 text-white/60">
-              Too many scaling businesses operate with scattered tools, unsecure databases, manual operations, and blind marketing campaigns. ID8 closes this execution gap by connecting brand design, custom software engineering, AI workflow integration, and strategic research into one unified studio.
+              What makes us unusual is the range: the same team that builds your system can produce your brand, your photography and your campaign, through our media arm, One Percent Media. Fewer suppliers, one standard, work that fits how you already operate.
             </p>
 
             <p className="mt-4 text-sm leading-7 text-white/60">
-              We are founder-led, technically rigorous, and structured for organizations that want to operate with absolute clarity, confidence, and efficiency.
+              We are founder-led, technically rigorous, and structured for organisations that want to operate with clarity and confidence — whether you need a single dashboard or a full digital operation built from scratch.
             </p>
 
             {/* windhoek coordinate badge */}

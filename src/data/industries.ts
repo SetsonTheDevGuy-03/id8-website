@@ -3,8 +3,8 @@ import {
   CalendarDays,
   Compass,
   CreditCard,
+  Factory,
   Globe,
-  HardHat,
   Landmark,
   Rocket,
   Store,
@@ -13,16 +13,16 @@ import type { Industry } from "@/types/content";
 
 export const industries: Industry[] = [
   {
-    title: "Mining, Industrial & Utilities",
-    description:
-      "Enterprise procurement systems, operational command dashboards, field data digitization, and compliance-grade document management platforms built for plant-scale environments.",
-    icon: HardHat,
-  },
-  {
     title: "Corporate Teams",
     description:
       "Optimized internal applications, security-focused operational dashboards, custom scheduling boards, task-automation hooks, and reliable B2B digital assets.",
     icon: Building2,
+  },
+  {
+    title: "Startups & Founders",
+    description:
+      "Accelerated product design sprints, clickable interactive UI prototypes, user flows, high-fidelity landing pages, and launch-ready MVP development to secure funding.",
+    icon: Rocket,
   },
   {
     title: "Government & Public Sector",
@@ -31,10 +31,10 @@ export const industries: Industry[] = [
     icon: Landmark,
   },
   {
-    title: "Startups & Founders",
+    title: "Small Businesses",
     description:
-      "Accelerated product design sprints, clickable interactive UI prototypes, user flows, high-fidelity landing pages, and launch-ready MVP development to secure funding.",
-    icon: Rocket,
+      "Modern websites, brand identity assets, and digital marketing setups to establish professional credibility, outshine local competitors, and capture inbound client leads.",
+    icon: Store,
   },
   {
     title: "NGOs & Institutions",
@@ -55,15 +55,15 @@ export const industries: Industry[] = [
     icon: Compass,
   },
   {
-    title: "Small Businesses",
-    description:
-      "Modern websites, brand identity assets, and digital marketing setups to establish professional credibility, outshine local competitors, and capture inbound client leads.",
-    icon: Store,
-  },
-  {
     title: "Events & Conferences",
     description:
       "Fully integrated event packages: branding design, live screen presentations, presenter and speaker holding assets, sponsor placement systems, and post-summit recap content.",
     icon: CalendarDays,
+  },
+  {
+    title: "Mining, Industrial & Utilities",
+    description:
+      "Enterprise procurement systems, operational command dashboards, field data digitization, VR operator training, and compliance-grade document management platforms built for plant-scale environments.",
+    icon: Factory,
   },
 ];

@@ -23,37 +23,13 @@ export const services: Service[] = [
     ],
     bullets: [
       "Automated operations state instead of messy Excel worksheets",
-      "Role-based secure views for staffs, leaders, and client users",
+      "Role-based secure views for staff, leaders, and client users",
       "Unified access point for critical project briefs, designs, and metrics"
     ],
     outcomes: [
       "Eliminate manual administrative lookup hours completely",
       "Centralize workflow visibility for regional coordinate offices",
       "Scale from casual freelance tasks into serious corporate systems"
-    ]
-  },
-  {
-    id: "digital-presence",
-    title: "Websites & Digital Presence",
-    category: "Presence & Growth",
-    summary: "Professional, SEO-optimized, highly responsive web interfaces that turn attention into qualified business opportunities.",
-    subServices: [
-      "Custom Business & Corporate Portals",
-      "Interactive One-Page Landing Funnels",
-      "Tourism & Hospitality Booking Engines",
-      "NGO & Institutional Information Platforms",
-      "Professional Persona Portfolios"
-    ],
-    bullets: [
-      "Complete client onboarding & inquiry pipelines built internally",
-      "High-speed loading with optimized asset delivery & clean layouts",
-      "Call-to-action routing widgets and conversion-optimized layouts",
-      "Semantic SEO configurations for local Namibian and global search space"
-    ],
-    outcomes: [
-      "Generate continuous stream of qualified customer enquiries",
-      "Establish immediate institutional trust with investors & partners",
-      "Differentiate strongly from competitors with custom branding"
     ]
   },
   {
@@ -74,7 +50,7 @@ export const services: Service[] = [
       "Saves hours of daily manual documentation and sorting"
     ],
     outcomes: [
-      "Saves 10-15 operational hours weekly per team member",
+      "Saves 10–15 operational hours weekly per team member",
       "Deliver 24/7 client response cycles across key timezones",
       "Standardize operations with structured AI-powered decision support"
     ]
@@ -103,10 +79,57 @@ export const services: Service[] = [
     ]
   },
   {
+    id: "vr-training",
+    title: "Immersive & VR Training",
+    category: "Simulation & Safety",
+    summary: "Virtual-reality training environments and simulators for operators and technicians — equipment simulation, site reconstruction and safety scenarios that are expensive or unsafe to rehearse in the real world.",
+    subServices: [
+      "Industrial Equipment Operation Simulators",
+      "Site & Environment Reconstruction (VR)",
+      "Safety & Emergency Scenario Training",
+      "Technician Onboarding Walkthroughs",
+      "Progress Tracking & Assessment Integration"
+    ],
+    bullets: [
+      "Train operators on complex equipment without downtime or safety risk",
+      "Reconstruct real sites and scenarios digitally for repeatable practice",
+      "Reduce training costs and incident exposure across field teams"
+    ],
+    outcomes: [
+      "Faster, safer onboarding for operators and site technicians",
+      "Measurable competency before personnel reach live environments",
+      "Durable training assets that scale across teams and locations"
+    ]
+  },
+  {
+    id: "digital-presence",
+    title: "Websites & Digital Presence",
+    category: "Presence & Growth",
+    summary: "Professional, SEO-optimized, highly responsive web interfaces that turn attention into qualified business opportunities.",
+    subServices: [
+      "Custom Business & Corporate Portals",
+      "Interactive One-Page Landing Funnels",
+      "Tourism & Hospitality Booking Engines",
+      "NGO & Institutional Information Platforms",
+      "Professional Persona Portfolios"
+    ],
+    bullets: [
+      "Complete client onboarding & inquiry pipelines built internally",
+      "High-speed loading with optimized asset delivery & clean layouts",
+      "Call-to-action routing widgets and conversion-optimized layouts",
+      "Semantic SEO configurations for local Namibian and global search space"
+    ],
+    outcomes: [
+      "Generate continuous stream of qualified customer enquiries",
+      "Establish immediate institutional trust with investors & partners",
+      "Differentiate strongly from competitors with custom branding"
+    ]
+  },
+  {
     id: "branding-design",
     title: "Brand Identity & Digital Design",
     category: "Creative & Identity",
-    summary: "Cohesive brand systems, corporate collateral, pitch assets, and marketing materials that command authority and present credibility.",
+    summary: "Cohesive brand systems, corporate collateral, pitch assets, and marketing materials that command authority and present credibility — delivered with in-house photography, video and campaign production through One Percent Media.",
     subServices: [
       "Custom Typography & Dual-Theme Logo Systems",
       "Complete Brand Visual Guidelines & Style Pools",
@@ -152,7 +175,7 @@ export const services: Service[] = [
     id: "digital-marketing",
     title: "Digital Marketing & Growth",
     category: "Marketing & Conversion",
-    summary: "Connect campaign strategy to lead funnels so that marketing traffic is converted into trackable email briefs and WhatsApp discussions.",
+    summary: "Connect campaign strategy to lead funnels so that marketing traffic is converted into trackable email briefs and meaningful conversations.",
     subServices: [
       "Social Media Campaign Architectures",
       "Inbound Lead Generation Pipelines",
