@@ -27,13 +27,13 @@ const capabilities = [
   },
   {
     icon: Zap,
-    label: "AI Automation",
+    label: "AI & Automation",
     color: "text-blue-400",
     bg: "bg-blue-500/10 border-blue-500/20",
   },
   {
     icon: Layers,
-    label: "Design, Brand & Media",
+    label: "Design & Digital Products",
     color: "text-purple-400",
     bg: "bg-purple-500/10 border-purple-500/20",
   },
@@ -73,7 +73,7 @@ export function Hero() {
 
             <Reveal delay={0.1}>
               <p className="text-base sm:text-lg text-white/60 leading-relaxed max-w-lg">
-                Software, dashboards and AI automation for Namibian companies — plus the brand, content and media around them. One team, from the problem to the launch.
+                Software, automation and the technology around it — designed, built and supported for Namibian companies. One team, from the problem to the system that solves it.
               </p>
             </Reveal>
 
