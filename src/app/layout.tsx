@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 import { ThemeProvider } from "@/context/ThemeContext";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://id8tech.com"),
@@ -48,6 +49,7 @@ export default function RootLayout({
             {children}
           </CartProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
