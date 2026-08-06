@@ -18,8 +18,8 @@ const coreValues = [
     icon: Shield,
   },
   {
-    title: "One Percent Media",
-    description: "ID8's media arm. In-house brand, photography, video and campaign production — so the same team builds your system and tells its story.",
+    title: "In-House Media Capability",
+    description: "Brand, photography, video and campaign production — in-house, so the same team that builds your system can tell its story.",
     icon: Award,
   },
   {
@@ -42,15 +42,15 @@ export function About() {
             <SectionHeading
               eyebrow="Founder-Led · Windhoek, Namibia"
               title="We build the systems businesses run on."
-              description="ID8 Technologies is a founder-led Namibian studio. We build the operational systems companies actually run on — dashboards, internal tools, client portals, automation — and design the products around them."
+              description="ID8 Technologies is a founder-led Namibian systems company. We build the operational systems businesses actually run on — dashboards, internal tools, client portals, automation — and we design the products and platforms around them."
             />
 
             <p className="mt-5 text-sm leading-7 text-white/60">
-              What makes us unusual is the range: the same team that builds your system can produce your brand, your photography and your campaign, through our media arm, One Percent Media. Fewer suppliers, one standard, work that fits how you already operate.
+              Sometimes the system isn't only software. We work across whatever the problem needs: web and mobile, automation, hardware and integration, and immersive or robotics work where a screen isn't enough. And we stay after handover — the technical support that keeps a system running matters as much as building it.
             </p>
 
             <p className="mt-4 text-sm leading-7 text-white/60">
-              We are founder-led, technically rigorous, and structured for organisations that want to operate with clarity and confidence — whether you need a single dashboard or a full digital operation built from scratch.
+              ID8 also runs an in-house media arm, One Percent Media, for brand, photography and campaign work when a project needs it.
             </p>
 
             {/* windhoek coordinate badge */}

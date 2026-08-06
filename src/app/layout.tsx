@@ -10,14 +10,14 @@ export const metadata: Metadata = {
     template: "%s | ID8 Technologies",
   },
   description:
-    "ID8 Technologies builds the systems Namibian businesses run on — software, dashboards, AI automation and VR training — plus the brand, content and media around them.",
+    "ID8 Technologies builds, integrates and supports the systems Namibian businesses run on — business systems and software, AI automation, digital products and the technology around them.",
   keywords: [
     "business systems Namibia",
     "software development Windhoek",
     "AI automation Namibia",
-    "VR training Namibia",
+    "digital products Namibia",
+    "systems integration Namibia",
     "digital systems studio",
-    "One Percent Media",
     "ID8 Technologies",
   ],
   alternates: {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ID8 Technologies | Digital Systems Studio",
     description:
-      "ID8 Technologies builds the systems Namibian businesses run on — software, dashboards, AI automation and VR training — plus the brand, content and media around them.",
+      "ID8 Technologies builds, integrates and supports the systems Namibian businesses run on — business systems and software, AI automation, digital products and the technology around them.",
     type: "website",
     locale: "en_NA",
   },

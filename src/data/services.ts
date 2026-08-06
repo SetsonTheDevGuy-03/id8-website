@@ -79,29 +79,6 @@ export const services: Service[] = [
     ]
   },
   {
-    id: "vr-training",
-    title: "Immersive & VR Training",
-    category: "Simulation & Safety",
-    summary: "Virtual-reality training environments and simulators for operators and technicians — equipment simulation, site reconstruction and safety scenarios that are expensive or unsafe to rehearse in the real world.",
-    subServices: [
-      "Industrial Equipment Operation Simulators",
-      "Site & Environment Reconstruction (VR)",
-      "Safety & Emergency Scenario Training",
-      "Technician Onboarding Walkthroughs",
-      "Progress Tracking & Assessment Integration"
-    ],
-    bullets: [
-      "Train operators on complex equipment without downtime or safety risk",
-      "Reconstruct real sites and scenarios digitally for repeatable practice",
-      "Reduce training costs and incident exposure across field teams"
-    ],
-    outcomes: [
-      "Faster, safer onboarding for operators and site technicians",
-      "Measurable competency before personnel reach live environments",
-      "Durable training assets that scale across teams and locations"
-    ]
-  },
-  {
     id: "digital-presence",
     title: "Websites & Digital Presence",
     category: "Presence & Growth",
@@ -126,26 +103,49 @@ export const services: Service[] = [
     ]
   },
   {
-    id: "branding-design",
-    title: "Brand Identity & Digital Design",
-    category: "Creative & Identity",
-    summary: "Cohesive brand systems, corporate collateral, pitch assets, and marketing materials that command authority and present credibility — delivered with in-house photography, video and campaign production through One Percent Media.",
+    id: "emerging-tech",
+    title: "Emerging Technology — VR, Simulation & Robotics",
+    category: "Immersive & Applied Tech",
+    summary: "Where a screen isn't enough: virtual-reality environments, equipment simulators and robotics work — training scenarios, site reconstruction and hands-on systems that are costly, risky or impossible to rehearse in the real world.",
     subServices: [
-      "Custom Typography & Dual-Theme Logo Systems",
-      "Complete Brand Visual Guidelines & Style Pools",
-      "Sponsorship & Bid Tender Proposal Design",
-      "Dynamic Social Media Media Kits & Templates",
-      "Corporate Brochure Layouts & Print Collateral"
+      "Industrial Equipment Operation Simulators",
+      "Site & Environment Reconstruction (VR)",
+      "Safety & Emergency Scenario Training",
+      "Robotics Integration & Programme Systems",
+      "Progress Tracking & Assessment Integration"
     ],
     bullets: [
-      "Build visual authority that justifies premium business rates",
-      "Consistent typography, negative space metrics, and high-impact layouts",
-      "Tailored assets explicitly mapped for digital presentation screens"
+      "Train operators on complex equipment without downtime or safety risk",
+      "Reconstruct real sites and scenarios digitally for repeatable practice",
+      "Reduce training costs and incident exposure across field teams"
     ],
     outcomes: [
-      "Elevate regional market trust through impeccable visual systems",
-      "Shorten B2B sales cycles with highly professional company decks",
-      "Command top-tier status in premium pitch encounters"
+      "Faster, safer onboarding for operators and site technicians",
+      "Measurable competency before personnel reach live environments",
+      "Durable training assets that scale across teams and locations"
+    ]
+  },
+  {
+    id: "technical-support",
+    title: "Technical Support & Integration",
+    category: "Operations & Continuity",
+    summary: "Keeping working systems working — hardware and software support, setup and configuration, system integration, and handover training for the people who use them every day.",
+    subServices: [
+      "Hardware Setup & Configuration",
+      "Software Installation & System Integration",
+      "Ongoing Technical Support & Troubleshooting",
+      "Staff Handover Training & Documentation",
+      "System Health Checks & Maintenance Plans"
+    ],
+    bullets: [
+      "On-site and remote support to keep systems running without disruption",
+      "Proper integration between tools, hardware and software layers",
+      "Training so teams can operate and maintain what was built"
+    ],
+    outcomes: [
+      "Reduce downtime and technical blockers after handover",
+      "Staff confident to operate systems without constant external help",
+      "Long-term reliability from systems built and supported by the same team"
     ]
   },
   {
@@ -215,6 +215,29 @@ export const services: Service[] = [
       "Navigate digital market entry with real competitive insights",
       "Eliminate guessing in system feature priority choices",
       "Formulate winning proposals by presenting researched market truths"
+    ]
+  },
+  {
+    id: "branding-design",
+    title: "Brand Identity & Digital Design",
+    category: "Creative & Identity",
+    summary: "Cohesive brand systems, corporate collateral, pitch assets, and marketing materials that command authority and present credibility — produced in-house, with photography, video and campaign production.",
+    subServices: [
+      "Custom Typography & Dual-Theme Logo Systems",
+      "Complete Brand Visual Guidelines & Style Pools",
+      "Sponsorship & Bid Tender Proposal Design",
+      "Dynamic Social Media Media Kits & Templates",
+      "Corporate Brochure Layouts & Print Collateral"
+    ],
+    bullets: [
+      "Build visual authority that justifies premium business rates",
+      "Consistent typography, negative space metrics, and high-impact layouts",
+      "Tailored assets explicitly mapped for digital presentation screens"
+    ],
+    outcomes: [
+      "Elevate regional market trust through impeccable visual systems",
+      "Shorten B2B sales cycles with highly professional company decks",
+      "Command top-tier status in premium pitch encounters"
     ]
   }
 ];
