@@ -41,10 +41,10 @@ export function SiteHeader() {
         >
           <div className="relative size-7 shrink-0 transition duration-300 group-hover:scale-110">
             <Image
-              src="/id8-logo-transparent.svg"
+              src="/id8-cube-icon.svg"
               alt="ID8 Technologies Logo"
               fill
-              className="object-contain invert"
+              className="object-contain"
             />
           </div>
           <span>
